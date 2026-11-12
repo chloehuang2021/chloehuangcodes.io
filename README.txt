@@ -1,0 +1,1 @@
+Projects page update only. Upload general-5/index.html and the NEW files in assets/ to the root of your GitHub repository. Do not delete your existing assets or homepage. If GitHub web upload refuses an existing general-5/index.html, edit the existing file directly and paste the new code. Paths are relative to the repo root.
