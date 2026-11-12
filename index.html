@@ -13,6 +13,15 @@ header{height:150px;display:flex;align-items:flex-start;justify-content:space-be
 @media(min-width:1450px){.inner{max-width:1040px}.hero-copy{padding-left:120px}.hero{column-gap:75px}}
 @media(max-width:1050px){.inner{max-width:780px}.hero{grid-template-columns:1fr 260px;gap:30px}.hero-copy{padding-left:35px}.hero .avatar{width:250px}.about,.featured{max-width:690px}}
 @media(max-width:700px){header{height:auto;min-height:125px;padding:22px 17px;flex-direction:column;gap:22px}header .brand a{font-size:19px}nav{margin:0;width:100%}nav a{flex:1;min-width:0;font-size:12px;padding:5px 7px}.cloud-banner{height:170px;background-position:center}.inner{padding-left:22px;padding-right:22px}.hero{display:flex;flex-direction:column-reverse;align-items:center;min-height:0;padding:35px 22px 75px;gap:22px}.hero .avatar{width:235px;height:245px}.hero-copy{padding:0}.hero h1{font-size:34px;margin-bottom:26px}.hero p{font-size:13px}.actions{flex-wrap:wrap;margin-top:30px;gap:10px}.about{display:block;min-height:0;padding:35px 22px 90px}.about .sun{width:94px;margin-bottom:15px}.featured{min-height:0;padding:25px 22px 90px}.featured h2{margin-bottom:30px}.projects-art{display:grid;gap:22px;height:auto}.art,.art.opsiq,.art.tiny,.art.covid{position:static;width:100%;height:auto;overflow:visible}.art img,.art.opsiq img{width:100%;height:auto;max-height:350px;object-fit:contain}.cloud-contact{min-height:240px}.contact-box{min-width:0;width:92%;padding:18px;gap:15px}.contact-box .plane{width:50px;height:50px}.contact-box p{font-size:15px}.socials{gap:23px}.copyright{height:130px}}
+
+
+/* Move navigation 35px lower without changing the layout */
+@media (min-width: 701px) {
+  header nav {
+    transform: translateY(35px);
+  }
+}
+
 </style><style>
 
 /* Click-to-open Projects navigation — consistent across all portfolio pages. */
