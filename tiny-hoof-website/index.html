@@ -28,9 +28,49 @@ h1{font-size:48px;line-height:1.17;letter-spacing:-.02em;font-weight:700;margin:
 @media(max-width:1150px){.detail-layout{grid-template-columns:minmax(0,40%) minmax(0,51%);gap:7%;margin:0 3%}.visual-rail{min-height:1250px;gap:160px}.visual-rail img{width:75%}h1{font-size:clamp(32px,4vw,48px)}.info-row{gap:24px}}
 @media(max-width:700px){.site-header{height:auto;min-height:126px;padding:22px 18px;display:block}.nav{margin-top:22px;justify-content:space-between}.nav a{flex:1;min-width:0;padding:8px 6px;font-size:12px}.detail-layout{display:flex;flex-direction:column;margin:0}.content{order:1;padding:35px 22px 65px}.visual-rail{order:2;min-height:0;padding:60px 0;gap:55px;background-size:cover}.visual-rail img{width:min(76%,380px)}.eyebrow{font-size:14px}h1{font-size:36px;margin-bottom:28px}.live-link{margin-bottom:28px}.section{margin-top:40px}.info-row{margin-top:45px;gap:20px}.footer-cloud{height:150px}.copyright{height:130px}}
 </style>
+<style>
+
+/* Click-to-open Projects navigation — consistent across all portfolio pages. */
+.portfolio-nav.portfolio-nav{display:flex;align-items:stretch;gap:0;width:auto;margin-top:2px;padding:0;max-width:none;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;position:relative;z-index:30}
+.portfolio-nav .nav-entry{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 176px;min-width:0;min-height:39px;padding:9px 13px;border:0;background:transparent;text-align:center;color:#161616;font-family:inherit;font-size:14px;font-weight:300;line-height:1.35;text-decoration:none;white-space:nowrap;cursor:pointer}
+.portfolio-nav .nav-entry + .nav-entry{border-left:2px solid #2a2a2a}
+.portfolio-nav .portfolio-dropdown-wrap{padding:0;cursor:default}
+.portfolio-nav .portfolio-trigger{width:100%;height:100%;min-height:39px;padding:9px 13px;display:flex;align-items:center;justify-content:center;background:none;border:0;color:inherit;font:inherit;line-height:1.35;cursor:pointer}
+.portfolio-nav .nav-entry.current,.portfolio-nav .portfolio-trigger.current,.portfolio-nav .portfolio-trigger[aria-expanded="true"]{color:#789db7}
+.portfolio-nav .portfolio-trigger:focus-visible,.portfolio-nav .nav-entry:focus-visible,.portfolio-nav .portfolio-menu a:focus-visible{outline:2px solid #679dca;outline-offset:2px}
+.portfolio-nav .portfolio-menu[hidden]{display:none!important}
+.portfolio-nav .portfolio-menu{position:absolute;top:100%;left:0;z-index:100;display:block;width:315px;max-width:calc(100vw - 30px);margin:0;background:#fff;border:1px solid #888;box-shadow:0 5px 13px rgba(0,0,0,.12)}
+.portfolio-nav .portfolio-menu a{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;height:auto;min-height:51px;margin:0;padding:11px 14px;border:0;background:#fff;color:#111;text-align:center;text-decoration:none;font-family:inherit;font-size:14px;font-weight:300;line-height:1.3;white-space:normal;flex:none}
+.portfolio-nav .portfolio-menu a+a{border:0;border-top:1px solid #888}
+.portfolio-nav .portfolio-menu a:hover,.portfolio-nav .portfolio-menu a:focus-visible{background:#f0f6f9;color:#679dca}
+.portfolio-nav .portfolio-menu a.current,.portfolio-nav .portfolio-menu a[aria-current="page"]{color:#679dca;background:#f3f8fb}
+/* Only the Resume page uses an older stylesheet; align its header with the other pages. */
+body:not(.home-page) header.resume-header{height:150px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative;top:auto;z-index:20;border-bottom:0;background:white}
+.resume-header .resume-brand{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:19px;line-height:1.15;text-decoration:none;letter-spacing:0}
+.resume-header .resume-updated{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:300;margin-top:9px;color:#111;padding:0;text-align:left}
+body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2px 0 0;padding:0;display:flex;justify-content:flex-start;gap:0}
+@media(max-width:700px){
+ .portfolio-nav.portfolio-nav{width:100%;margin-top:10px;justify-content:space-between}
+ .portfolio-nav .nav-entry{flex:1 1 33.333%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}
+ .portfolio-nav .portfolio-trigger{font-size:12px;min-height:34px;padding:7px 4px}
+ .portfolio-nav .portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}
+ .portfolio-nav .portfolio-menu a{font-size:13px;min-height:48px}
+ body:not(.home-page) header.resume-header{height:auto;min-height:126px;padding:22px 18px;display:block}
+ body:not(.home-page) header.resume-header .portfolio-nav{margin-top:22px;width:100%}
+}
+</style>
 </head>
 <body>
-<header class="site-header"><div><a class="brand" href="../">ChloeHuangCodes</a><div class="updated">This website was last updated on 11/13/2026</div></div><nav class="nav" aria-label="Main navigation"><a href="../">About Me</a><a href="../general-5/" class="current">Projects</a><a href="../lead-collection/">Resume &amp; Contact</a></nav></header>
+<header class="site-header"><div><a class="brand" href="../">ChloeHuangCodes</a><div class="updated">This website was last updated on 11/13/2026</div></div><nav class="nav portfolio-nav" aria-label="Main navigation">
+  <a class="nav-entry" href="../">About Me</a>
+  <div class="nav-entry portfolio-dropdown-wrap">
+    <button class="portfolio-trigger current" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="portfolio-project-menu">Projects</button>
+    <div class="portfolio-menu" id="portfolio-project-menu" hidden>
+      <a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a><a href="./" class="current" aria-current="page">Tiny Hoof Website</a><a href="../covid19-ai-chatbot/">COVID-19 AI Chatbot</a>
+    </div>
+  </div>
+  <a class="nav-entry" href="../lead-collection/">Resume &amp; Contact</a>
+</nav></header>
 <main class="detail-layout">
 <aside class="visual-rail" aria-label="Tiny Hoof website screenshots">
 <img src="../assets/tiny-hoof-home-detail.png" alt="Tiny Hoof homepage with rainbow over Maui landscape">
@@ -54,4 +94,30 @@ h1{font-size:48px;line-height:1.17;letter-spacing:-.02em;font-weight:700;margin:
 </article>
 </main>
 <footer><div class="footer-cloud"></div><div class="copyright">© 2026 Chloe Huang. All rights reserved.</div></footer>
+
+<script>
+(function(){
+  const dropdown = document.querySelector('.portfolio-dropdown-wrap');
+  if (!dropdown) return;
+  const button = dropdown.querySelector('.portfolio-trigger');
+  const menu = dropdown.querySelector('.portfolio-menu');
+  function setOpen(open){
+    button.setAttribute('aria-expanded', String(open));
+    menu.hidden = !open;
+  }
+  button.addEventListener('click', function(event){
+    event.stopPropagation();
+    setOpen(button.getAttribute('aria-expanded') !== 'true');
+  });
+  document.addEventListener('click', function(event){
+    if (!dropdown.contains(event.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function(event){
+    if (event.key === 'Escape' && !menu.hidden){
+      setOpen(false);
+      button.focus();
+    }
+  });
+})();
+</script>
 </body></html>

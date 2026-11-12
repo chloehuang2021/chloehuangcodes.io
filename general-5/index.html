@@ -10,11 +10,77 @@
 .footer-cloud{height:238px;background:#c3dce9 url('../assets/cloud-texture.png') center/cover no-repeat}.copyright{height:210px;display:flex;justify-content:center;align-items:center;font-size:11px}
 @media(max-width:920px){.project-list{width:min(100% - 48px,760px)}.project{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:45px}.nav a{min-width:0;padding:10px 22px}}
 @media(max-width:650px){.site-header{height:auto;min-height:126px;padding:22px 18px;display:block}.nav{margin-top:22px;justify-content:space-between}.nav a{flex:1;padding:8px 6px;font-size:12px}.title-band{height:150px}.title-band h1{font-size:40px}.project-list{padding:45px 0 70px}.project,.project--third{display:flex;flex-direction:column;min-height:0;gap:24px;margin-top:0!important}.project+.project{margin-top:76px!important}.media{width:100%}.media .opsiq,.media .tiny,.media .covid{width:min(100%,350px);max-height:350px;object-fit:contain}.project-copy{width:100%}.tag{font-size:12px}.project h2{font-size:22px}.description,.stack{font-size:14px}.footer-cloud{height:160px}.copyright{height:130px}}
-</style></head><body>
-<header class="site-header"><div><a class="brand" href="../">ChloeHuangCodes</a><div class="updated">This website was last updated on 11/13/2026</div></div><nav class="nav" aria-label="Main navigation"><a href="../">About Me</a><a href="./" class="current" aria-current="page">Projects</a><a href="../lead-collection/">Resume &amp; Contact</a></nav></header>
+</style><style>
+
+/* Click-to-open Projects navigation — consistent across all portfolio pages. */
+.portfolio-nav.portfolio-nav{display:flex;align-items:stretch;gap:0;width:auto;margin-top:2px;padding:0;max-width:none;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;position:relative;z-index:30}
+.portfolio-nav .nav-entry{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 176px;min-width:0;min-height:39px;padding:9px 13px;border:0;background:transparent;text-align:center;color:#161616;font-family:inherit;font-size:14px;font-weight:300;line-height:1.35;text-decoration:none;white-space:nowrap;cursor:pointer}
+.portfolio-nav .nav-entry + .nav-entry{border-left:2px solid #2a2a2a}
+.portfolio-nav .portfolio-dropdown-wrap{padding:0;cursor:default}
+.portfolio-nav .portfolio-trigger{width:100%;height:100%;min-height:39px;padding:9px 13px;display:flex;align-items:center;justify-content:center;background:none;border:0;color:inherit;font:inherit;line-height:1.35;cursor:pointer}
+.portfolio-nav .nav-entry.current,.portfolio-nav .portfolio-trigger.current,.portfolio-nav .portfolio-trigger[aria-expanded="true"]{color:#789db7}
+.portfolio-nav .portfolio-trigger:focus-visible,.portfolio-nav .nav-entry:focus-visible,.portfolio-nav .portfolio-menu a:focus-visible{outline:2px solid #679dca;outline-offset:2px}
+.portfolio-nav .portfolio-menu[hidden]{display:none!important}
+.portfolio-nav .portfolio-menu{position:absolute;top:100%;left:0;z-index:100;display:block;width:315px;max-width:calc(100vw - 30px);margin:0;background:#fff;border:1px solid #888;box-shadow:0 5px 13px rgba(0,0,0,.12)}
+.portfolio-nav .portfolio-menu a{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;height:auto;min-height:51px;margin:0;padding:11px 14px;border:0;background:#fff;color:#111;text-align:center;text-decoration:none;font-family:inherit;font-size:14px;font-weight:300;line-height:1.3;white-space:normal;flex:none}
+.portfolio-nav .portfolio-menu a+a{border:0;border-top:1px solid #888}
+.portfolio-nav .portfolio-menu a:hover,.portfolio-nav .portfolio-menu a:focus-visible{background:#f0f6f9;color:#679dca}
+.portfolio-nav .portfolio-menu a.current,.portfolio-nav .portfolio-menu a[aria-current="page"]{color:#679dca;background:#f3f8fb}
+/* Only the Resume page uses an older stylesheet; align its header with the other pages. */
+body:not(.home-page) header.resume-header{height:150px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative;top:auto;z-index:20;border-bottom:0;background:white}
+.resume-header .resume-brand{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:19px;line-height:1.15;text-decoration:none;letter-spacing:0}
+.resume-header .resume-updated{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:300;margin-top:9px;color:#111;padding:0;text-align:left}
+body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2px 0 0;padding:0;display:flex;justify-content:flex-start;gap:0}
+@media(max-width:700px){
+ .portfolio-nav.portfolio-nav{width:100%;margin-top:10px;justify-content:space-between}
+ .portfolio-nav .nav-entry{flex:1 1 33.333%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}
+ .portfolio-nav .portfolio-trigger{font-size:12px;min-height:34px;padding:7px 4px}
+ .portfolio-nav .portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}
+ .portfolio-nav .portfolio-menu a{font-size:13px;min-height:48px}
+ body:not(.home-page) header.resume-header{height:auto;min-height:126px;padding:22px 18px;display:block}
+ body:not(.home-page) header.resume-header .portfolio-nav{margin-top:22px;width:100%}
+}
+</style>
+</head><body>
+<header class="site-header"><div><a class="brand" href="../">ChloeHuangCodes</a><div class="updated">This website was last updated on 11/13/2026</div></div><nav class="nav portfolio-nav" aria-label="Main navigation">
+  <a class="nav-entry" href="../">About Me</a>
+  <div class="nav-entry portfolio-dropdown-wrap">
+    <button class="portfolio-trigger current" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="portfolio-project-menu">Projects</button>
+    <div class="portfolio-menu" id="portfolio-project-menu" hidden>
+      <a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a><a href="../tiny-hoof-website/">Tiny Hoof Website</a><a href="../covid19-ai-chatbot/">COVID-19 AI Chatbot</a>
+    </div>
+  </div>
+  <a class="nav-entry" href="../lead-collection/">Resume &amp; Contact</a>
+</nav></header>
 <section class="title-band"><h1>Projects</h1></section>
 <main class="project-list">
 <article class="project"><div class="media"><img class="opsiq" src="../assets/opsiq-preview.jpg" alt="OpsIQ AI ticket dashboard screenshot"></div><div class="project-copy"><p class="tag">AI + FULL STACK</p><h2><a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a></h2><p class="description">An AI-powered ticket management application that helps streamline IT support workflows through automated ticket analysis and prioritization. Users can create, manage, and update support tickets while receiving AI-generated categorization, priority recommendations, and suggested next steps. Built with Angular, Java, Spring Boot, HTML/CSS, and PostgreSQL.</p><div class="stack"><span class="stack-label">Built with</span> Angular · Spring Boot · PostgreSQL<br>OpenRouter LLM · REST API</div><a class="read-more" href="../opsiq-ai-ticket-triage/">Read More <span aria-hidden="true">⟶</span></a></div></article>
 <article class="project"><div class="media"><img class="tiny" src="../assets/tiny-hoof-project.png" alt="Tiny Hoof website screenshots"></div><div class="project-copy"><p class="tag">WEB DEVELOPMENT</p><h2><a href="../tiny-hoof-website/">Tiny Hoof Website</a></h2><p class="description">A custom business website built to support Tiny Hoof’s online presence and improve customer accessibility. Developed as part of a four-person team for a real-world business client, the site has remained in active production use for more than four years. Used a customizable web framework with extended functionality.</p><div class="stack"><span class="stack-label">Built with</span> HTML · CSS · JavaScript · Custom CMS</div><a class="read-more" href="../tiny-hoof-website/">Read More <span aria-hidden="true">⟶</span></a></div></article>
 <article class="project project--third"><div class="media"><img class="covid" src="../assets/covid-conversation.png" alt="COVID-19 chatbot conversation screenshot"></div><div class="project-copy"><p class="tag">AI/NLP</p><h2><a href="../covid19-ai-chatbot/">Covid-19 Chatbot</a></h2><p class="description">A real-time AI chatbot built to provide COVID-19 information through both text and voice interactions. Users can ask open-ended COVID-related questions and receive instant responses across desktop and mobile devices. The project was named a finalist in the 2020 Hawai‘i Annual Coding Challenge (HACC).</p><p class="description extra"><strong>Want a quick overview?</strong> Check out the 3-minute pitch video for the chatbot project.</p><div class="stack"><span class="stack-label">Built with</span> Conversational AI · NLP · Voice-to-Text<br>Vue.js · JavaScript · Dialogflow</div><a class="read-more" href="../covid19-ai-chatbot/">Read More <span aria-hidden="true">⟶</span></a></div></article>
-</main><footer><div class="footer-cloud"></div><div class="copyright">© 2026 Chloe Huang. All rights reserved.</div></footer></body></html>
+</main><footer><div class="footer-cloud"></div><div class="copyright">© 2026 Chloe Huang. All rights reserved.</div></footer>
+<script>
+(function(){
+  const dropdown = document.querySelector('.portfolio-dropdown-wrap');
+  if (!dropdown) return;
+  const button = dropdown.querySelector('.portfolio-trigger');
+  const menu = dropdown.querySelector('.portfolio-menu');
+  function setOpen(open){
+    button.setAttribute('aria-expanded', String(open));
+    menu.hidden = !open;
+  }
+  button.addEventListener('click', function(event){
+    event.stopPropagation();
+    setOpen(button.getAttribute('aria-expanded') !== 'true');
+  });
+  document.addEventListener('click', function(event){
+    if (!dropdown.contains(event.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function(event){
+    if (event.key === 'Escape' && !menu.hidden){
+      setOpen(false);
+      button.focus();
+    }
+  });
+})();
+</script>
+</body></html>
