@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Chloe Huang resume and contact details, software engineer.">
+<meta name="description" content="Chloe Huang | Software Engineer resume, email and LinkedIn contact details.">
 <title>Resume &amp; Contact | ChloeHuangCodes</title>
 <style>
-:root{--accent:#679dca;--nav-active:#789db7;--ink:#111;--gray:#eae8e8}
+:root{--blue:#6d91a7;--nav-active:#789db7;--ink:#111;--muted:#5c6470;--line:#dce7eb;--soft:#f5f8fa}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:white;color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:14px;-webkit-font-smoothing:antialiased}
+body{margin:0;background:#fff;color:var(--ink);font:300 14px/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-/* Same site-wide navigation as the finished portfolio. */
-.site-header{height:150px;padding:39px 30px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;position:relative;z-index:30;background:#fff}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+/* Same header and click-to-open Projects menu used elsewhere on the site. */
+.site-header{height:150px;padding:39px 30px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;position:relative;z-index:10;background:#fff}
 .brand{font-size:19px;line-height:1.15;text-decoration:none;font-weight:400;display:block}
 .updated{font-size:10.5px;margin-top:9px}
 .portfolio-nav{display:flex;align-items:stretch;margin-top:2px;position:relative;z-index:20;font-size:14px;font-weight:300}
@@ -27,58 +27,30 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .portfolio-menu{position:absolute;top:100%;left:0;z-index:100;width:315px;max-width:calc(100vw - 30px);background:#fff;border:1px solid #888;box-shadow:0 5px 13px #0002}
 .portfolio-menu a{display:flex;align-items:center;justify-content:center;min-height:51px;padding:11px 14px;border:0;text-decoration:none;color:#111;font-size:14px;line-height:1.3;text-align:center;white-space:normal}
 .portfolio-menu a+a{border-top:1px solid #888}
-.portfolio-menu a:hover,.portfolio-menu a:focus-visible{background:#f0f6f9;color:var(--accent)}
-/* The Wix reference: white resume side + light gray contact side. */
-.resume-contact{display:grid;grid-template-columns:1fr 1fr;min-height:682px;align-items:stretch}
-.resume-side{padding:86px 35px 105px max(28px,35.5%);min-width:0}
-.resume-side h1{font-size:34px;line-height:1.1;letter-spacing:.01em;font-weight:700;margin:0 0 46px}
-.resume-side h2{font-size:14px;font-weight:700;margin:0 0 20px}
-.resume-side .resume-detail{margin:0;font-size:14px;line-height:1.6}
-.resume-side .resume-detail a,.resume-side .contact-details a{color:#2465d5;text-decoration:none}
-.resume-side .resume-detail a:hover,.resume-side .contact-details a:hover{text-decoration:underline}
-.resume-side .contact-details{margin-top:104px}
-.resume-side .contact-details h2{margin-bottom:23px}
-.resume-side .contact-details p{font-size:14px;line-height:1.6;margin:0 0 6px;overflow-wrap:anywhere}
-.contact-side{position:relative;background:var(--gray);min-height:682px}
-.cloud-panel{position:absolute;width:230px;height:316px;top:85px;left:33%;background:#c7e1f2 url('../assets/contact-cloud.jpg') center/cover no-repeat}
-.contact-card{position:absolute;width:270px;min-height:355px;top:161px;left:51%;background:#fff;padding:30px 28px 31px;box-shadow:none}
-.contact-card h2{font-size:14px;line-height:1.3;font-weight:700;text-align:center;margin:0 0 17px;white-space:nowrap}
-.contact-card form{display:flex;flex-direction:column;gap:0}
-.field{display:flex;flex-direction:column;margin-bottom:13px}
-.field label{font-size:12px;line-height:1.2;font-weight:600;margin-bottom:7px}
-.field input,.field textarea{border:0;border-bottom:1px solid #111;border-radius:0;padding:4px 0 5px;font:300 14px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#111;background:transparent;min-height:28px;outline-offset:2px}
-.field textarea{resize:vertical;min-height:28px;height:31px}
-.field input:focus,.field textarea:focus{border-bottom:2px solid var(--accent)}
-.required{color:#3a6fd0}
-.submit-btn{margin-top:2px;min-height:28px;border:0;border-radius:30px;background:#69a5d1;color:white;font:400 13px/1.2 "Helvetica Neue",Helvetica,Arial,sans-serif;cursor:pointer}
-.submit-btn:hover{background:#508fb9}
-.copyright{height:195px;display:flex;justify-content:center;align-items:center;background:#fff;font-size:11px;text-align:center;padding:20px}
-/* Keep the narrow Wix composition without overflow on laptop and tablet. */
-@media(max-width:1150px){
-  .resume-side{padding-left:24%;padding-right:18px}
-  .cloud-panel{left:18%}
-  .contact-card{left:38%}
-}
-@media(max-width:820px){
-  .site-header{height:auto;min-height:126px;padding:22px 18px;display:block}
-  .portfolio-nav{margin-top:22px;width:100%;justify-content:space-between}
-  .nav-entry{flex:1 1 33.3%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}
-  .portfolio-trigger{min-height:34px;font-size:12px;padding:7px 4px}
-  .portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}
-  .portfolio-menu a{font-size:13px;min-height:48px}
-  .resume-contact{grid-template-columns:1fr;min-height:0}
-  .resume-side{padding:54px max(22px,8%) 65px}
-  .resume-side h1{margin-bottom:36px}
-  .resume-side .contact-details{margin-top:65px}
-  .contact-side{min-height:570px}
-  .cloud-panel{left:calc(50% - 165px);top:63px;width:205px;height:315px}
-  .contact-card{left:calc(50% - 55px);top:128px;width:250px}
-  .copyright{height:130px}
-}
-@media(max-width:410px){
-  .cloud-panel{left:7%;width:57%}
-  .contact-card{left:auto;right:5%;width:69%;padding:26px 18px}
-}
+.portfolio-menu a:hover,.portfolio-menu a:focus-visible{background:#f0f6f9;color:var(--blue)}
+/* Calm sky banner matches the visual language on the Projects overview. */
+.title-band{min-height:195px;background:#c5dde9 url('../assets/cloud-texture.png') center center/cover no-repeat;display:flex;justify-content:center;align-items:center;text-align:center;padding:38px 20px}
+.title-band h1{font-size:46px;font-weight:600;line-height:1.12;letter-spacing:-.025em;margin:0;color:#151515}
+/* Simple two-column layout, with no inactive Wix form or backend. */
+.main-area{background:var(--soft);padding:66px 24px 82px}
+.contact-grid{max-width:1020px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;min-height:326px;padding:38px 44px 40px;box-shadow:0 9px 24px rgba(61,96,114,.05)}
+.eyebrow{color:var(--blue);font-weight:600;letter-spacing:.09em;font-size:12px;margin:0 0 13px;text-transform:uppercase}
+.panel h2{font-size:30px;font-weight:400;letter-spacing:-.026em;line-height:1.25;margin:0 0 17px}
+.panel .summary{max-width:380px;color:#4e5560;margin:0 0 34px;font-size:14px;line-height:1.65}
+.primary-link{display:inline-flex;gap:18px;justify-content:space-between;align-items:center;text-decoration:none;background:var(--blue);color:#fff;border-radius:40px;min-height:45px;padding:11px 20px;font-weight:400;transition:background .18s ease}
+.primary-link:hover{background:#547c95}
+.primary-link .arrow{font-size:21px;font-weight:300;line-height:1}
+.direct-link{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:5px 18px;padding:13px 0;border-top:1px solid var(--line);text-decoration:none}
+.direct-link:last-child{border-bottom:1px solid var(--line)}
+.direct-link:hover .value{text-decoration:underline}
+.direct-link .type{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:#6e7d85}
+.direct-link .value{font-size:14px;color:#416e8d;overflow-wrap:anywhere}
+.contact-note{font-size:12px;color:#64717b;margin:16px 0 0}
+.copyright{height:145px;display:flex;align-items:center;justify-content:center;font-size:11px;text-align:center;padding:20px;background:#fff}
+@media(max-width:900px){.site-header{height:auto;min-height:126px;padding:22px 18px;display:block}.portfolio-nav{margin-top:22px;width:100%;justify-content:space-between}.nav-entry{flex:1 1 33.3%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}.portfolio-trigger{min-height:34px;font-size:12px;padding:7px 4px}.portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}.portfolio-menu a{font-size:13px;min-height:48px}.title-band{min-height:150px}.title-band h1{font-size:38px}.main-area{padding:40px 20px 60px}.panel{padding:30px 28px;min-height:0}.contact-grid{gap:20px}.panel h2{font-size:27px}}
+@media(max-width:650px){.contact-grid{grid-template-columns:1fr}.panel{padding:30px 26px;min-height:0}.title-band h1{font-size:34px}.copyright{height:115px}.direct-link .value{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.primary-link{transition:none}}
 </style>
 </head>
 <body>
@@ -97,31 +69,26 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <a class="nav-entry current" aria-current="page" href="./">Resume &amp; Contact</a>
   </nav>
 </header>
-<main class="resume-contact">
-  <section class="resume-side" aria-labelledby="resume-title">
-    <h1 id="resume-title">RESUME</h1>
-    <h2>📄 Resume</h2>
-    <p class="resume-detail">Software engineer (<a href="https://www.chloehuangcodes.com/_files/ugd/94832e_301f1b1396ba4e5b8d8ef6151b4d2612.pdf" target="_blank" rel="noopener noreferrer">click here</a>)</p>
-    <!-- IMPORTANT: Above is the existing Wix resume URL. Replace it with '../assets/resume.pdf' once you add that PDF to GitHub, BEFORE canceling Wix. -->
-    <section class="contact-details" aria-labelledby="contact-title">
-      <h2 id="contact-title">🌐 Contact Info</h2>
-      <p>Email: <a href="mailto:chloehuangjobs@gmail.com">chloehuangjobs@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/chloe-huang-tech/" target="_blank" rel="noopener noreferrer">linkedin.com/in/chloe-huang-tech</a></p>
-    </section>
-  </section>
-  <section class="contact-side" aria-labelledby="contact-form-heading">
-    <div class="cloud-panel" aria-hidden="true"></div>
-    <div class="contact-card">
-      <h2 id="contact-form-heading">Let's Keep in Touch</h2>
-      <form id="contact-form">
-        <div class="field"><label for="first">First Name</label><input id="first" name="first" autocomplete="given-name"></div>
-        <div class="field"><label for="last">Last Name</label><input id="last" name="last" autocomplete="family-name"></div>
-        <div class="field"><label for="email">Email <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="1"></textarea></div>
-        <button class="submit-btn" type="submit" title="Opens your email app to send your message">Submit</button>
-      </form>
+<main>
+  <section class="title-band" aria-labelledby="page-title"><h1 id="page-title">Resume &amp; Contact</h1></section>
+  <div class="main-area">
+    <div class="contact-grid">
+      <section class="panel" aria-labelledby="resume-heading">
+        <p class="eyebrow">01 / Resume</p>
+        <h2 id="resume-heading">Software Engineer Resume</h2>
+        <p class="summary">Explore my engineering experience, technical skills, and projects.</p>
+        <!-- Replace the Wix-hosted URL with a GitHub-hosted PDF before ending Wix hosting. -->
+        <a class="primary-link" href="https://www.chloehuangcodes.com/_files/ugd/94832e_301f1b1396ba4e5b8d8ef6151b4d2612.pdf" target="_blank" rel="noopener noreferrer">View my resume <span class="arrow" aria-hidden="true">↗</span></a>
+      </section>
+      <section class="panel" aria-labelledby="contact-heading">
+        <p class="eyebrow">02 / Contact</p>
+        <h2 id="contact-heading">Get in touch</h2>
+        <p class="summary">Reach me directly by email or connect with me on LinkedIn.</p>
+        <a class="direct-link" href="mailto:chloehuangjobs@gmail.com"><span class="type">Email</span><span class="value">chloehuangjobs@gmail.com ↗</span></a>
+        <a class="direct-link" href="https://www.linkedin.com/in/chloe-huang-tech/" target="_blank" rel="noopener noreferrer"><span class="type">LinkedIn</span><span class="value">linkedin.com/in/chloe-huang-tech ↗</span></a>
+      </section>
     </div>
-  </section>
+  </div>
 </main>
 <footer class="copyright">© 2026 Chloe Huang. All rights reserved.</footer>
 <script>
@@ -133,16 +100,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   button.addEventListener('click',function(event){event.stopPropagation();setOpen(button.getAttribute('aria-expanded')!=='true');});
   document.addEventListener('click',function(event){if(!dropdown.contains(event.target))setOpen(false);});
   document.addEventListener('keydown',function(event){if(event.key==='Escape'&&!menu.hidden){setOpen(false);button.focus();}});
-  document.getElementById('contact-form').addEventListener('submit',function(event){
-    event.preventDefault();
-    const first=document.getElementById('first').value.trim();
-    const last=document.getElementById('last').value.trim();
-    const email=document.getElementById('email').value.trim();
-    const message=document.getElementById('message').value.trim();
-    const body=['Name: '+[first,last].filter(Boolean).join(' '),'Email: '+email,'',message].join('\n');
-    // GitHub Pages has no backend: launch an email draft, do not imply that the form has already sent a message.
-    window.location.href='mailto:chloehuangjobs@gmail.com?subject='+encodeURIComponent('Portfolio contact from '+(first||'visitor'))+'&body='+encodeURIComponent(body);
-  });
 })();
 </script>
 </body>
