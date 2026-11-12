@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Chloe Huang | Software Engineer, portfolio and projects">
+<title>About Me | ChloeHuangCodes</title>
+<style>
+:root{--blue:#6d91a7;--ink:#111}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit}a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+header{height:150px;display:flex;align-items:flex-start;justify-content:space-between;padding:38px 2% 0 1.8%;gap:20px}header .brand a{font-size:19px;text-decoration:none;display:block}header .brand small{display:block;font-size:11px;margin-top:7px}nav{display:flex;align-items:center;margin-top:4px}nav a{min-width:180px;text-align:center;text-decoration:none;font-size:15px;padding:6px 14px}nav a+a{border-left:2px solid #333}nav a.active{color:var(--blue)}
+.cloud-banner{height:264px;background:#cee3f1 url('assets/cloud-banner.png') center/cover no-repeat}
+.inner{max-width:1040px;margin:0 auto}.hero{min-height:483px;display:grid;grid-template-columns: minmax(0,1fr) 300px;column-gap:70px;align-items:center;padding:30px 0}.hero-copy{padding-left:120px}.hero h1{font-size:35px;font-weight:400;line-height:1.17;letter-spacing:-.6px;margin:0 0 32px}.accent{color:var(--blue)}.hero p{font-size:12px;line-height:1.35;margin:0;max-width:405px}.hero .avatar{width:270px;height:290px;object-fit:contain;justify-self:start}.actions{display:flex;gap:18px;margin-top:46px;white-space:nowrap}.actions a{background:var(--blue);color:white;display:inline-flex;align-items:center;gap:10px;border-radius:40px;font-size:11px;letter-spacing:1.25px;text-decoration:none;padding:10px 14px;min-height:42px}.actions span{font-size:23px;line-height:1}
+.about{min-height:400px;padding:70px 0 20px;display:grid;grid-template-columns:140px 1fr;column-gap:45px;max-width:690px;align-items:start}.about .sun{width:115px;object-fit:contain;margin-top:0}.about h2{font-weight:400;font-size:24px;margin:0 0 23px}.about p{font-size:12px;line-height:1.45;margin:0 0 7px}.about .read-more{font-size:17px;font-weight:700}
+.featured{max-width:690px;margin:auto;padding-top:14px;min-height:830px}.featured h2{font-size:25px;font-weight:400;margin:0 0 65px}.projects-art{height:660px;position:relative}.art{position:absolute;display:block;transition:transform .18s ease;overflow:hidden}.art:hover{transform:scale(1.025);z-index:6}.art img{width:100%;height:100%;object-fit:contain;display:block}.art.opsiq{left:0;top:10px;width:235px;height:430px;z-index:1}.art.opsiq img{object-fit:cover;object-position:left top}.art.tiny{left:135px;top:85px;width:445px;height:295px;z-index:3}.art.covid{right:-4px;top:12px;width:155px;height:205px;z-index:4}
+.cloud-contact{background:#d8e9f1 url('assets/footer-cloud-temp.jpg') center/cover no-repeat;min-height:300px;display:flex;justify-content:center;align-items:center}.contact-box{background:white;min-width:570px;min-height:120px;display:flex;align-items:center;justify-content:center;gap:29px;padding:20px 35px}.contact-box .plane{width:70px;height:70px;object-fit:contain}.contact-box p{font-size:19px;margin:0 0 13px}.socials{display:flex;align-items:center;justify-content:center;gap:38px}.socials a{font-size:23px;text-decoration:none;font-weight:bold;line-height:1}.socials svg{width:24px;height:24px;display:block}.copyright{height:200px;display:grid;place-items:center;font-size:11px}
+@media(min-width:1450px){.inner{max-width:1040px}.hero-copy{padding-left:120px}.hero{column-gap:75px}}
+@media(max-width:1050px){.inner{max-width:780px}.hero{grid-template-columns:1fr 260px;gap:30px}.hero-copy{padding-left:35px}.hero .avatar{width:250px}.about,.featured{max-width:690px}}
+@media(max-width:700px){header{height:auto;min-height:125px;padding:22px 17px;flex-direction:column;gap:22px}header .brand a{font-size:19px}nav{margin:0;width:100%}nav a{flex:1;min-width:0;font-size:12px;padding:5px 7px}.cloud-banner{height:170px;background-position:center}.inner{padding-left:22px;padding-right:22px}.hero{display:flex;flex-direction:column-reverse;align-items:center;min-height:0;padding:35px 22px 75px;gap:22px}.hero .avatar{width:235px;height:245px}.hero-copy{padding:0}.hero h1{font-size:34px;margin-bottom:26px}.hero p{font-size:13px}.actions{flex-wrap:wrap;margin-top:30px;gap:10px}.about{display:block;min-height:0;padding:35px 22px 90px}.about .sun{width:94px;margin-bottom:15px}.featured{min-height:0;padding:25px 22px 90px}.featured h2{margin-bottom:30px}.projects-art{display:grid;gap:22px;height:auto}.art,.art.opsiq,.art.tiny,.art.covid{position:static;width:100%;height:auto;overflow:visible}.art img,.art.opsiq img{width:100%;height:auto;max-height:350px;object-fit:contain}.cloud-contact{min-height:240px}.contact-box{min-width:0;width:92%;padding:18px;gap:15px}.contact-box .plane{width:50px;height:50px}.contact-box p{font-size:15px}.socials{gap:23px}.copyright{height:130px}}
+</style><style>
+
+/* Click-to-open Projects navigation — consistent across all portfolio pages. */
+.portfolio-nav.portfolio-nav{display:flex;align-items:stretch;gap:0;width:auto;margin-top:2px;padding:0;max-width:none;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;position:relative;z-index:30}
+.portfolio-nav .nav-entry{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 176px;min-width:0;min-height:39px;padding:9px 13px;border:0;background:transparent;text-align:center;color:#161616;font-family:inherit;font-size:14px;font-weight:300;line-height:1.35;text-decoration:none;white-space:nowrap;cursor:pointer}
+.portfolio-nav .nav-entry + .nav-entry{border-left:2px solid #2a2a2a}
+.portfolio-nav .portfolio-dropdown-wrap{padding:0;cursor:default}
+.portfolio-nav .portfolio-trigger{width:100%;height:100%;min-height:39px;padding:9px 13px;display:flex;align-items:center;justify-content:center;background:none;border:0;color:inherit;font:inherit;line-height:1.35;cursor:pointer}
+.portfolio-nav .nav-entry.current,.portfolio-nav .portfolio-trigger.current,.portfolio-nav .portfolio-trigger[aria-expanded="true"]{color:#789db7}
+.portfolio-nav .portfolio-trigger:focus-visible,.portfolio-nav .nav-entry:focus-visible,.portfolio-nav .portfolio-menu a:focus-visible{outline:2px solid #679dca;outline-offset:2px}
+.portfolio-nav .portfolio-menu[hidden]{display:none!important}
+.portfolio-nav .portfolio-menu{position:absolute;top:100%;left:0;z-index:100;display:block;width:315px;max-width:calc(100vw - 30px);margin:0;background:#fff;border:1px solid #888;box-shadow:0 5px 13px rgba(0,0,0,.12)}
+.portfolio-nav .portfolio-menu a{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;height:auto;min-height:51px;margin:0;padding:11px 14px;border:0;background:#fff;color:#111;text-align:center;text-decoration:none;font-family:inherit;font-size:14px;font-weight:300;line-height:1.3;white-space:normal;flex:none}
+.portfolio-nav .portfolio-menu a+a{border:0;border-top:1px solid #888}
+.portfolio-nav .portfolio-menu a:hover,.portfolio-nav .portfolio-menu a:focus-visible{background:#f0f6f9;color:#679dca}
+.portfolio-nav .portfolio-menu a.current,.portfolio-nav .portfolio-menu a[aria-current="page"]{color:#679dca;background:#f3f8fb}
+/* Only the Resume page uses an older stylesheet; align its header with the other pages. */
+body:not(.home-page) header.resume-header{height:150px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative;top:auto;z-index:20;border-bottom:0;background:white}
+.resume-header .resume-brand{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:19px;line-height:1.15;text-decoration:none;letter-spacing:0}
+.resume-header .resume-updated{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:300;margin-top:9px;color:#111;padding:0;text-align:left}
+body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2px 0 0;padding:0;display:flex;justify-content:flex-start;gap:0}
+@media(max-width:700px){
+ .portfolio-nav.portfolio-nav{width:100%;margin-top:10px;justify-content:space-between}
+ .portfolio-nav .nav-entry{flex:1 1 33.333%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}
+ .portfolio-nav .portfolio-trigger{font-size:12px;min-height:34px;padding:7px 4px}
+ .portfolio-nav .portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}
+ .portfolio-nav .portfolio-menu a{font-size:13px;min-height:48px}
+ body:not(.home-page) header.resume-header{height:auto;min-height:126px;padding:22px 18px;display:block}
+ body:not(.home-page) header.resume-header .portfolio-nav{margin-top:22px;width:100%}
+}
+
+/* Homepage menu positioning only. Keep hero, banner, avatar and all content unchanged. */
+@media (min-width: 701px) {
+  header > nav.portfolio-nav.portfolio-nav {
+    transform: translateY(35px);
+  }
+}
+</style>
+</head><body>
+<header><div class="brand"><a href="./">ChloeHuangCodes</a><small>This website was last updated on 11/13/2026</small></div><nav class="nav portfolio-nav" aria-label="Main navigation">
+  <a class="nav-entry current" aria-current="page" href="./">About Me</a>
+  <div class="nav-entry portfolio-dropdown-wrap">
+    <button class="portfolio-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="portfolio-project-menu">Projects</button>
+    <div class="portfolio-menu" id="portfolio-project-menu" hidden>
+      <a href="opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a><a href="tiny-hoof-website/">Tiny Hoof Website</a><a href="covid19-ai-chatbot/">COVID-19 AI Chatbot</a>
+    </div>
+  </div>
+  <a class="nav-entry" href="lead-collection/">Resume &amp; Contact</a>
+</nav></header>
+<main>
+<section class="cloud-banner" aria-label="Cloud banner featuring Chloe Huang's name and a black bird silhouette"></section>
+<section class="hero inner"><div class="hero-copy"><h1>Building thoughtful<br>software that<br><span class="accent">solves real problems.</span></h1><p>Software Engineer with full-stack and database experience,<br> focused on AI-powered applications and user-centric functions.</p><div class="actions"><a href="general-5/">View Projects <span aria-hidden="true">⟶</span></a><a href="lead-collection/">Download Resume <span aria-hidden="true">☁</span></a></div></div><img class="avatar" src="assets/chloe-avatar-original.jpg" alt="Chloe's red-haired illustrated avatar working on a laptop"></section>
+<section class="about inner"><img class="sun" src="assets/sun-icon.png" alt="Smiling hand-drawn sun"><div><h2>A little <span class="accent">about me</span></h2><p>Aloha! 🌊🌺 I’m Chloe, a software engineer with 4 years of experience.<br>Raised in Hawai‘i with a passion for problem-solving. Driven by curiosity, creativity, and kuleana....</p><a class="read-more" href="lead-collection/">Read more about me</a></div></section>
+<section class="featured"><h2>Featured <span class="accent">Projects</span></h2><div class="projects-art"><a href="opsiq-ai-ticket-triage/" class="art opsiq" aria-label="OpsIQ Ticket Triage project"><img src="assets/opsiq-preview.jpg" alt="OpsIQ Ticket Triage project screenshot"></a><a href="tiny-hoof-website/" class="art tiny" aria-label="Tiny Hoof Website project"><img src="assets/tiny-hoof-preview.png" alt="Tiny Hoof Animal Therapy project screenshot"></a><a href="covid19-ai-chatbot/" class="art covid" aria-label="COVID-19 AI Chatbot project"><img src="assets/covid-chatbot-preview.png" alt="COVID-19 chatbot project screenshot"></a></div></section>
+<section class="cloud-contact"><div class="contact-box"><img class="plane" src="assets/paper-plane.png" alt="" aria-hidden="true"><div><p>Let’s build something amazing together.</p><div class="socials"><a href="lead-collection/" aria-label="Contact by email">✉</a><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://github.com/chloehuang2021" aria-label="GitHub">◧</a><a href="lead-collection/" aria-label="Resume">▤</a></div></div></div></section>
+</main><footer class="copyright">© 2026 Chloe Huang. All rights reserved.</footer>
+<script>
+(function(){
+  const dropdown = document.querySelector('.portfolio-dropdown-wrap');
+  if (!dropdown) return;
+  const button = dropdown.querySelector('.portfolio-trigger');
+  const menu = dropdown.querySelector('.portfolio-menu');
+  function setOpen(open){
+    button.setAttribute('aria-expanded', String(open));
+    menu.hidden = !open;
+  }
+  button.addEventListener('click', function(event){
+    event.stopPropagation();
+    setOpen(button.getAttribute('aria-expanded') !== 'true');
+  });
+  document.addEventListener('click', function(event){
+    if (!dropdown.contains(event.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function(event){
+    if (event.key === 'Escape' && !menu.hidden){
+      setOpen(false);
+      button.focus();
+    }
+  });
+})();
+</script>
+</body></html>
