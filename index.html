@@ -1,161 +1,150 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Chloe Huang | Software Engineer, portfolio and projects">
-<title>About Me | ChloeHuangCodes</title>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Real-Time Conversational AI COVID-19 Chatbot project by Chloe Huang.">
+<title>COVID-19 Chatbot | ChloeHuangCodes</title>
 <style>
-:root{--blue:#6d91a7;--ink:#111}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit}a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
-header{height:150px;display:flex;align-items:flex-start;justify-content:space-between;padding:38px 2% 0 1.8%;gap:20px}header .brand a{font-size:19px;text-decoration:none;display:block}header .brand small{display:block;font-size:11px;margin-top:7px}nav{display:flex;align-items:center;margin-top:4px}nav a{min-width:180px;text-align:center;text-decoration:none;font-size:15px;padding:6px 14px}nav a+a{border-left:2px solid #333}nav a.active{color:var(--blue)}
-.cloud-banner{height:264px;background:#cee3f1 url('assets/cloud-banner.png') center/cover no-repeat}
-.inner{max-width:1040px;margin:0 auto}.hero{min-height:483px;display:grid;grid-template-columns: minmax(0,1fr) 300px;column-gap:70px;align-items:center;padding:30px 0}.hero-copy{padding-left:120px}.hero h1{font-size:35px;font-weight:400;line-height:1.17;letter-spacing:-.6px;margin:0 0 32px}.accent{color:var(--blue)}.hero p{font-size:12px;line-height:1.35;margin:0;max-width:405px}.hero .avatar{width:270px;height:290px;object-fit:contain;justify-self:start}.actions{display:flex;gap:18px;margin-top:46px;white-space:nowrap}.actions a{background:var(--blue);color:white;display:inline-flex;align-items:center;gap:10px;border-radius:40px;font-size:11px;letter-spacing:1.25px;text-decoration:none;padding:10px 14px;min-height:42px}.actions span{font-size:23px;line-height:1}
-.about{min-height:400px;padding:70px 0 20px;display:grid;grid-template-columns:140px 1fr;column-gap:45px;max-width:690px;align-items:start}.about .sun{width:115px;object-fit:contain;margin-top:0}.about h2{font-weight:400;font-size:24px;margin:0 0 23px}.about p{font-size:12px;line-height:1.45;margin:0 0 7px}.about .read-more{font-size:17px;font-weight:700}
-.featured{max-width:690px;margin:auto;padding-top:14px;min-height:830px}.featured h2{font-size:25px;font-weight:400;margin:0 0 65px}.projects-art{height:660px;position:relative}.art{position:absolute;display:block;transition:transform .18s ease;overflow:hidden}.art:hover{transform:scale(1.025);z-index:6}.art img{width:100%;height:100%;object-fit:contain;display:block}.art.opsiq{left:0;top:10px;width:235px;height:430px;z-index:1}.art.opsiq img{object-fit:cover;object-position:left top}.art.tiny{left:135px;top:85px;width:445px;height:295px;z-index:3}.art.covid{right:-4px;top:12px;width:155px;height:205px;z-index:4}
-.cloud-contact{background:#d8e9f1 url('assets/footer-cloud-temp.jpg') center/cover no-repeat;min-height:300px;display:flex;justify-content:center;align-items:center}.contact-box{background:white;min-width:570px;min-height:120px;display:flex;align-items:center;justify-content:center;gap:29px;padding:20px 35px}.contact-box .plane{width:70px;height:70px;object-fit:contain}.contact-box p{font-size:19px;margin:0 0 13px}.socials{display:flex;align-items:center;justify-content:center;gap:38px}.socials a{font-size:23px;text-decoration:none;font-weight:bold;line-height:1}.socials svg{width:24px;height:24px;display:block}.copyright{height:200px;display:grid;place-items:center;font-size:11px}
-@media(min-width:1450px){.inner{max-width:1040px}.hero-copy{padding-left:120px}.hero{column-gap:75px}}
-@media(max-width:1050px){.inner{max-width:780px}.hero{grid-template-columns:1fr 260px;gap:30px}.hero-copy{padding-left:35px}.hero .avatar{width:250px}.about,.featured{max-width:690px}}
-@media(max-width:700px){header{height:auto;min-height:125px;padding:22px 17px;flex-direction:column;gap:22px}header .brand a{font-size:19px}nav{margin:0;width:100%}nav a{flex:1;min-width:0;font-size:12px;padding:5px 7px}.cloud-banner{height:170px;background-position:center}.inner{padding-left:22px;padding-right:22px}.hero{display:flex;flex-direction:column-reverse;align-items:center;min-height:0;padding:35px 22px 75px;gap:22px}.hero .avatar{width:235px;height:245px}.hero-copy{padding:0}.hero h1{font-size:34px;margin-bottom:26px}.hero p{font-size:13px}.actions{flex-wrap:wrap;margin-top:30px;gap:10px}.about{display:block;min-height:0;padding:35px 22px 90px}.about .sun{width:94px;margin-bottom:15px}.featured{min-height:0;padding:25px 22px 90px}.featured h2{margin-bottom:30px}.projects-art{display:grid;gap:22px;height:auto}.art,.art.opsiq,.art.tiny,.art.covid{position:static;width:100%;height:auto;overflow:visible}.art img,.art.opsiq img{width:100%;height:auto;max-height:350px;object-fit:contain}.cloud-contact{min-height:240px}.contact-box{min-width:0;width:92%;padding:18px;gap:15px}.contact-box .plane{width:50px;height:50px}.contact-box p{font-size:15px}.socials{gap:23px}.copyright{height:130px}}
-</style><style>
-
-/* Click-to-open Projects navigation — consistent across all portfolio pages. */
-.portfolio-nav.portfolio-nav{display:flex;align-items:stretch;gap:0;width:auto;margin-top:2px;padding:0;max-width:none;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;position:relative;z-index:30}
-.portfolio-nav .nav-entry{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 176px;min-width:0;min-height:39px;padding:9px 13px;border:0;background:transparent;text-align:center;color:#161616;font-family:inherit;font-size:14px;font-weight:300;line-height:1.35;text-decoration:none;white-space:nowrap;cursor:pointer}
-.portfolio-nav .nav-entry + .nav-entry{border-left:2px solid #2a2a2a}
-.portfolio-nav .portfolio-dropdown-wrap{padding:0;cursor:default}
-.portfolio-nav .portfolio-trigger{width:100%;height:100%;min-height:39px;padding:9px 13px;display:flex;align-items:center;justify-content:center;background:none;border:0;color:inherit;font:inherit;line-height:1.35;cursor:pointer}
-.portfolio-nav .nav-entry.current,.portfolio-nav .portfolio-trigger.current,.portfolio-nav .portfolio-trigger[aria-expanded="true"]{color:#789db7}
-.portfolio-nav .portfolio-trigger:focus-visible,.portfolio-nav .nav-entry:focus-visible,.portfolio-nav .portfolio-menu a:focus-visible{outline:2px solid #679dca;outline-offset:2px}
-.portfolio-nav .portfolio-menu[hidden]{display:none!important}
-.portfolio-nav .portfolio-menu{position:absolute;top:100%;left:0;z-index:100;display:block;width:315px;max-width:calc(100vw - 30px);margin:0;background:#fff;border:1px solid #888;box-shadow:0 5px 13px rgba(0,0,0,.12)}
-.portfolio-nav .portfolio-menu a{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;height:auto;min-height:51px;margin:0;padding:11px 14px;border:0;background:#fff;color:#111;text-align:center;text-decoration:none;font-family:inherit;font-size:14px;font-weight:300;line-height:1.3;white-space:normal;flex:none}
-.portfolio-nav .portfolio-menu a+a{border:0;border-top:1px solid #888}
-.portfolio-nav .portfolio-menu a:hover,.portfolio-nav .portfolio-menu a:focus-visible{background:#f0f6f9;color:#679dca}
-.portfolio-nav .portfolio-menu a.current,.portfolio-nav .portfolio-menu a[aria-current="page"]{color:#679dca;background:#f3f8fb}
-/* Only the Resume page uses an older stylesheet; align its header with the other pages. */
-body:not(.home-page) header.resume-header{height:150px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative;top:auto;z-index:20;border-bottom:0;background:white}
-.resume-header .resume-brand{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:19px;line-height:1.15;text-decoration:none;letter-spacing:0}
-.resume-header .resume-updated{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:300;margin-top:9px;color:#111;padding:0;text-align:left}
-body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2px 0 0;padding:0;display:flex;justify-content:flex-start;gap:0}
+:root{--accent:#679dca;--ink:#111;--soft:#e0e9eb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#fff;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+/* Same page header and project dropdown as the finished portfolio */
+.site-header{height:164px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative;z-index:10}
+.brand{font-size:19px;line-height:1.15;text-decoration:none;font-weight:400;display:block}
+.updated{font-size:10.5px;margin-top:9px}
+.portfolio-nav{display:flex;align-items:stretch;gap:0;width:auto;margin-top:2px;position:relative;z-index:20;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300}
+.nav-entry{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 176px;min-height:39px;padding:9px 13px;text-align:center;text-decoration:none;font-size:14px;font-weight:300;line-height:1.35;white-space:nowrap;border:0;background:transparent;cursor:pointer}
+.nav-entry+.nav-entry{border-left:2px solid #2a2a2a}
+.portfolio-dropdown-wrap{padding:0;cursor:default}
+.portfolio-trigger{width:100%;height:100%;min-height:39px;padding:9px 13px;display:flex;align-items:center;justify-content:center;border:0;background:none;color:#789db7;font:inherit;cursor:pointer}
+.portfolio-trigger[aria-expanded="true"]{color:#679dca}
+.portfolio-menu[hidden]{display:none!important}
+.portfolio-menu{position:absolute;top:100%;left:0;z-index:100;width:315px;max-width:calc(100vw - 30px);background:#fff;border:1px solid #888;box-shadow:0 5px 13px #0002}
+.portfolio-menu a{display:flex;align-items:center;justify-content:center;min-height:51px;padding:11px 14px;border:0;text-decoration:none;color:#111;font-size:14px;font-weight:300;line-height:1.3;text-align:center;white-space:normal}
+.portfolio-menu a+a{border-top:1px solid #888}
+.portfolio-menu a:hover,.portfolio-menu a:focus-visible{background:#f0f6f9;color:#679dca}
+.portfolio-menu a.current{color:#679dca;background:#f3f8fb}
+/* Wix detail-page layout: a tall cloud column, with text on the right. */
+.detail-layout{display:grid;grid-template-columns:minmax(0,31%) minmax(0,38%);column-gap:14%;align-items:stretch;margin:0 4.15%}
+.visual-rail{min-height:1530px;background:#c3dce9 url('../assets/covid-cloud-rail.jpg') center top/cover no-repeat}
+.content{padding:32px 0 107px;min-width:0;font-size:14px;font-weight:300;line-height:1.36}
+.eyebrow{color:var(--accent);font-size:17px;font-weight:600;margin:0 0 29px}
+h1{font-size:52px;line-height:1.17;letter-spacing:-.02em;font-weight:700;margin:0 0 42px;max-width:660px}
+.live-link{display:inline-block;color:#f33;font-size:19px;font-weight:600;text-decoration:underline;margin:0 0 42px}
+.intro{max-width:645px;color:#333}
+.intro p{margin:0 0 19px;line-height:1.37}
+.intro a,.special a{color:#366dc6;text-decoration:underline;overflow-wrap:anywhere}
+.section-title{font-size:14px;font-weight:600;color:#3f9bd3;line-height:1.3;margin:0 0 22px}
+.stack-section{margin-top:93px}
+.stack-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 35px;max-width:370px;line-height:1.8}
+.info-row{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:72px;margin-top:103px}
+.info-row ul,.special ul{margin:0;padding-left:25px}
+.info-row li,.special li{margin:0 0 5px;line-height:1.38}
+.special{margin-top:90px;max-width:380px}
+.copyright{height:210px;background:#ebe9e9;display:flex;justify-content:center;align-items:center;font-size:11px}
+@media(max-width:1150px){
+ .detail-layout{grid-template-columns:minmax(0,40%) minmax(0,51%);gap:7%;margin:0 3%}
+ .visual-rail{min-height:1280px}
+ h1{font-size:clamp(34px,4vw,52px)}
+ .info-row{gap:26px}
+ .nav-entry{flex-basis:150px}
+}
 @media(max-width:700px){
- .portfolio-nav.portfolio-nav{width:100%;margin-top:10px;justify-content:space-between}
- .portfolio-nav .nav-entry{flex:1 1 33.333%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}
- .portfolio-nav .portfolio-trigger{font-size:12px;min-height:34px;padding:7px 4px}
- .portfolio-nav .portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}
- .portfolio-nav .portfolio-menu a{font-size:13px;min-height:48px}
- body:not(.home-page) header.resume-header{height:auto;min-height:126px;padding:22px 18px;display:block}
- body:not(.home-page) header.resume-header .portfolio-nav{margin-top:22px;width:100%}
+ .site-header{height:auto;min-height:126px;padding:22px 18px;display:block}
+ .portfolio-nav{margin-top:22px;width:100%;justify-content:space-between}
+ .nav-entry{flex:1 1 33.33%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}
+ .portfolio-trigger{font-size:12px;min-height:34px;padding:7px 4px}
+ .portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}
+ .portfolio-menu a{font-size:13px;min-height:48px}
+ .detail-layout{display:flex;flex-direction:column;margin:0}
+ .content{order:1;padding:35px 22px 68px}
+ .visual-rail{order:2;min-height:180px;background-position:center center}
+ .eyebrow{font-size:14px;margin-bottom:18px}
+ h1{font-size:35px;margin-bottom:28px}
+ .live-link{font-size:17px;margin-bottom:29px}
+ .stack-section{margin-top:46px}
+ .info-row{margin-top:54px;gap:35px;grid-template-columns:1fr}
+ .special{margin-top:55px}
+ .copyright{height:130px}
 }
-
-/* Homepage menu positioning only. Keep hero, banner, avatar and all content unchanged. */
-@media (min-width: 701px) {
-  header > nav.portfolio-nav.portfolio-nav {
-    transform: translateY(35px);
-  }
-}
-
-/* About Me: show only the intro until the visitor asks to read more. */
-.about-expanded[hidden]{display:none!important}
-.about-expanded{margin-top:70px}
-.about .about-expanded p{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:14px;line-height:1.5;margin:0 0 48px}
-.about .about-expanded p:last-child{margin-bottom:8px}
-.about .about-toggle{display:inline-block;padding:0;border:0;background:transparent;color:#111;font-family:inherit;text-decoration:underline;text-align:left;cursor:pointer}
-.about .about-toggle:hover{color:var(--blue)}
-.about .about-toggle:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
-@media(max-width:700px){.about-expanded{margin-top:40px}.about .about-expanded p{margin-bottom:28px}}
-
-/* Native HTML toggle: works without JavaScript. */
-.about .about-details{display:block}
-.about .about-details > summary{
-  list-style:none;
-  display:inline-block;
-  width:max-content;
-  max-width:100%;
-  font-size:17px;
-  font-weight:700;
-  font-family:inherit;
-  color:#111;
-  text-decoration:underline;
-  cursor:pointer;
-  padding:0;
-  background:none;
-}
-.about .about-details > summary::-webkit-details-marker{display:none}
-.about .about-details > summary::marker{content:""}
-.about .about-details > summary:hover{color:var(--blue)}
-.about .about-details > summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
-.about .about-less-label{display:none}
-.about .about-details[open] .about-more-label{display:none}
-.about .about-details[open] .about-less-label{display:inline}
-.about .about-details[open]{display:flex;flex-direction:column}
-.about .about-details[open] > summary{order:2;margin-top:4px}
-.about .about-details[open] > .about-expanded{order:1;margin-top:70px}
-.about .about-details .about-expanded p{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:14px;line-height:1.5;margin:0 0 48px}
-.about .about-details .about-expanded p:last-child{margin-bottom:8px}
-@media(max-width:700px){.about .about-details[open] > .about-expanded{margin-top:40px}.about .about-details .about-expanded p{margin-bottom:28px}}
 </style>
-</head><body>
-<header><div class="brand"><a href="./">ChloeHuangCodes</a><small>This website was last updated on 11/13/2026</small></div><nav class="nav portfolio-nav" aria-label="Main navigation">
-  <a class="nav-entry current" aria-current="page" href="./">About Me</a>
-  <div class="nav-entry portfolio-dropdown-wrap">
-    <button class="portfolio-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="portfolio-project-menu">Projects</button>
-    <div class="portfolio-menu" id="portfolio-project-menu" hidden>
-      <a href="opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a><a href="tiny-hoof-website/">Tiny Hoof Website</a><a href="covid19-ai-chatbot/">COVID-19 AI Chatbot</a>
-    </div>
-  </div>
-  <a class="nav-entry" href="lead-collection/">Resume &amp; Contact</a>
-</nav></header>
-<main>
-<section class="cloud-banner" aria-label="Cloud banner featuring Chloe Huang's name and a black bird silhouette"></section>
-<section class="hero inner"><div class="hero-copy"><h1>Building thoughtful<br>software that<br><span class="accent">solves real problems.</span></h1><p>Software Engineer with full-stack and database experience,<br> focused on AI-powered applications and user-centric functions.</p><div class="actions"><a href="general-5/">View Projects <span aria-hidden="true">⟶</span></a><a href="lead-collection/">Download Resume <span aria-hidden="true">☁</span></a></div></div><img class="avatar" src="assets/chloe-avatar-original.jpg" alt="Chloe's red-haired illustrated avatar working on a laptop"></section>
-<section class="about inner">
-  <img class="sun" src="assets/sun-icon.png" alt="Smiling hand-drawn sun">
-  <div>
-    <h2>A little <span class="accent">about me</span></h2>
-    <p>Aloha! 🌊🌺 I’m Chloe, a software engineer with 4 years of experience.<br>Raised in Hawai‘i with a passion for problem-solving. Driven by curiosity, creativity, and kuleana....</p>
-
-    <details class="about-details" id="about-details">
-      <summary class="read-more about-toggle">
-        <span class="about-more-label">Read more about me</span>
-        <span class="about-less-label">Read less</span>
-      </summary>
-      <div class="about-expanded">
-      <p>I am raised in Hawai‘i from a young age, with a love for problem-solving, a passion for learning, and a strong sense of kuleana, responsibility to others and my community. These values guide both my life and my work as a software engineer with 4 years of experience.</p>
-
-      <p>I’m a software engineer with experience building and supporting production systems, with a strong focus on backend development, database-driven applications, and system reliability. In my current role, I develop and maintain production database systems and backend data workflows that support 26 city departments and over one million users. My work includes SQL Server migrations across legacy and modern environments, production troubleshooting, automation of database processes, and secure access management across large-scale systems.</p>
-
-      <p>Previously, I was part of Capgemini’s Next Gen Talent (NGT) Program, a leadership development program for high-potential engineers, where I progressed from Software Engineer to Senior Software Engineer. In this role, I developed and implemented customer-facing contact center and CRM solutions for a leading global investment bank using Salesforce and Genesys Cloud CX, and developed a full user interface for a Department of Defense client based on technical and user requirements.</p>
-
-      <p>I hold a B.S. in Computer Science and a B.A. in Political Science, graduating cum laude from Hawai‘i Pacific University, where I served as Student Body President during my senior year. My passion for software engineering began in high school, where I built an app prototype that earned me a four-year Biz4Good full-ride scholarship. Before graduating, I also had the privilege of serving as Student Body President at my high school.</p>
-
-      <p>Outside of software, I’m interested in the intersection of public policy and technology, particularly algorithmic decision-making in government and the ethical implications of data and AI in public life. I’m also interested in Asian American identity and representation.</p>
+</head>
+<body>
+<header class="site-header">
+  <div><a class="brand" href="../">ChloeHuangCodes</a><div class="updated">This website was last updated on 11/13/2026</div></div>
+  <nav class="portfolio-nav" aria-label="Main navigation">
+    <a class="nav-entry" href="../">About Me</a>
+    <div class="nav-entry portfolio-dropdown-wrap">
+      <button class="portfolio-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="portfolio-project-menu">Projects</button>
+      <div class="portfolio-menu" id="portfolio-project-menu" hidden>
+        <a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a>
+        <a href="../tiny-hoof-website/">Tiny Hoof Website</a>
+        <a href="./" class="current" aria-current="page">COVID-19 AI Chatbot</a>
       </div>
-    </details>
-  </div>
-</section>
-<section class="featured"><h2>Featured <span class="accent">Projects</span></h2><div class="projects-art"><a href="opsiq-ai-ticket-triage/" class="art opsiq" aria-label="OpsIQ Ticket Triage project"><img src="assets/opsiq-preview.jpg" alt="OpsIQ Ticket Triage project screenshot"></a><a href="tiny-hoof-website/" class="art tiny" aria-label="Tiny Hoof Website project"><img src="assets/tiny-hoof-preview.png" alt="Tiny Hoof Animal Therapy project screenshot"></a><a href="covid19-ai-chatbot/" class="art covid" aria-label="COVID-19 AI Chatbot project"><img src="assets/covid-chatbot-preview.png" alt="COVID-19 chatbot project screenshot"></a></div></section>
-<section class="cloud-contact"><div class="contact-box"><img class="plane" src="assets/paper-plane.png" alt="" aria-hidden="true"><div><p>Let’s build something amazing together.</p><div class="socials"><a href="lead-collection/" aria-label="Contact by email">✉</a><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://github.com/chloehuang2021" aria-label="GitHub">◧</a><a href="lead-collection/" aria-label="Resume">▤</a></div></div></div></section>
-</main><footer class="copyright">© 2026 Chloe Huang. All rights reserved.</footer>
+    </div>
+    <a class="nav-entry" href="../lead-collection/">Resume &amp; Contact</a>
+  </nav>
+</header>
+<main class="detail-layout">
+  <aside class="visual-rail" aria-hidden="true"></aside>
+  <article class="content">
+    <p class="eyebrow">AI/NLP</p>
+    <h1>Real-Time<br>Conversational AI<br>COVID-19 Chatbot</h1>
+    <a class="live-link" href="https://bwarrend.github.io/covid-19_chatbot/" target="_blank" rel="noopener noreferrer">🚀▶️ Live Demo</a>
+
+    <div class="intro">
+      <p>This is a real-time interactive chatbot with a voice-to-text function to deliver updated COVID-19 related information. All information were from government official website to ensure the accuracy and credibility of information. All Information is extracted from the state’s websites: <a href="https://hawaiicovid19.com/" target="_blank" rel="noopener noreferrer">https://hawaiicovid19.com/</a> and <a href="https://health.hawaii.gov/coronavirusdisease2019/" target="_blank" rel="noopener noreferrer">https://health.hawaii.gov/coronavirusdisease2019/</a>. In this 24-7 available app, you can ask the chatbot open-ended COVID-19 related questions and receive a response. The chatbot will provide an accurate answer to the user’s question or direct the user to the appropriate agency (DOH, DOT, physician, etc) for more information. This Chatbot will function on multiple platforms (desktop and mobile) and will NOT collect Personally identifiable information. In addition, the chatbot has voice-to-text capabilities.</p>
+    </div>
+
+    <section class="stack-section" aria-labelledby="stack-heading">
+      <h2 class="section-title" id="stack-heading">TECH STACK</h2>
+      <div class="stack-grid"><div>🌐 HTML/CSS</div><div>🟢 Vue</div><div>⚡ JavaScript</div><div>🎨 Sass</div></div>
+    </section>
+
+    <div class="info-row">
+      <section aria-labelledby="worked-heading">
+        <h2 class="section-title" id="worked-heading">WHAT I WORKED ON</h2>
+        <ul>
+          <li>Trained the chatbot with conversations and scenarios by implementing training agents like intents, phrases, actions, and responses into Dialogflow, a Google natural language understanding platform.</li>
+          <li>Architected conversational flow integrating 4 agents, 50 intents, 400 phrases, 50 actions, and 200 responses.</li>
+          <li>Installed the timestamp function that shows time zone, minutes, and seconds with JavaScript and Node.js.</li>
+          <li>Optimized chatbot accuracy by 10% through implementation of conversational AI components.</li>
+        </ul>
+      </section>
+      <section aria-labelledby="inside-heading">
+        <h2 class="section-title" id="inside-heading">INSIDE THE BUILD</h2>
+        <ul>
+          <li>Real-time COVID-19 updates</li>
+          <li>Government-verified information</li>
+          <li>Open-ended conversational Q&amp;A</li>
+          <li>Voice-to-text interaction</li>
+          <li>Desktop &amp; mobile support</li>
+          <li>Privacy-first experience</li>
+          <li>Available 24/7</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="special" aria-labelledby="mentions-heading">
+      <h2 class="section-title" id="mentions-heading">SPECIAL MENTIONS</h2>
+      <ul><li>Finalist of the 2020 Hawai‘i Annual Coding Challenge. 3-minute pitch video (<a href="https://www.youtube.com/watch?v=T1h239CrFpQ" target="_blank" rel="noopener noreferrer">Link</a>).</li></ul>
+    </section>
+  </article>
+</main>
+<footer><div class="copyright">© 2026 Chloe Huang. All rights reserved.</div></footer>
 <script>
 (function(){
-  const dropdown = document.querySelector('.portfolio-dropdown-wrap');
-  if (!dropdown) return;
-  const button = dropdown.querySelector('.portfolio-trigger');
-  const menu = dropdown.querySelector('.portfolio-menu');
-  function setOpen(open){
-    button.setAttribute('aria-expanded', String(open));
-    menu.hidden = !open;
-  }
-  button.addEventListener('click', function(event){
-    event.stopPropagation();
-    setOpen(button.getAttribute('aria-expanded') !== 'true');
-  });
-  document.addEventListener('click', function(event){
-    if (!dropdown.contains(event.target)) setOpen(false);
-  });
-  document.addEventListener('keydown', function(event){
-    if (event.key === 'Escape' && !menu.hidden){
-      setOpen(false);
-      button.focus();
-    }
-  });
+ const dropdown=document.querySelector('.portfolio-dropdown-wrap');
+ const button=dropdown.querySelector('.portfolio-trigger');
+ const menu=dropdown.querySelector('.portfolio-menu');
+ function setOpen(open){button.setAttribute('aria-expanded',String(open));menu.hidden=!open;}
+ button.addEventListener('click',function(event){event.stopPropagation();setOpen(button.getAttribute('aria-expanded')!=='true');});
+ document.addEventListener('click',function(event){if(!dropdown.contains(event.target))setOpen(false);});
+ document.addEventListener('keydown',function(event){if(event.key==='Escape'&&!menu.hidden){setOpen(false);button.focus();}});
 })();
 </script>
-</body></html>
+</body>
+</html>
