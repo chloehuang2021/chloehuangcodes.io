@@ -23,3 +23,13 @@ GitHub Pages generally handles the trailing-slash directory index URLs; test lin
 
 ## Important
 Do **not** cancel Wix Premium or change DNS yet. The resume link currently depends on Wix and the placeholders are not original website assets. Domain renewal is separate from Premium hosting.
+
+
+## Screenshot-matched homepage update
+The homepage has been rebuilt to follow the supplied full-page screenshots. Images ending with `-temp` are screenshot-derived temporary crops and MUST be replaced with the original Wix Media Manager images for a sharp, faithful design. The bird and footer icons are approximate text glyphs; replace with the original SVG/icon assets. Social-link URLs other than GitHub and email still need confirmation. Resume button currently opens Resume & Contact rather than downloading a PDF. Other pages retain their earlier draft styling.
+
+
+## Original homepage image assets (new)
+Original artwork supplied by the site owner is stored in `assets/chloe-avatar.png`, `cloud-banner.png`, `sun-icon.png`, and `paper-plane.png`. The Featured Projects section now uses owner-provided `opsiq-preview.jpg`, `tiny-hoof-preview.png`, `covid-chatbot-preview.png` and links to their individual pages.
+
+The cloud footer background remains a temporary screenshot crop and the social symbols remain substitutes. Please supply the original footer background and social icons for a pixel-perfect match. The project screenshots were supplied as screenshots, not interactive demos. The visual arrangement is approximate.
