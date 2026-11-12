@@ -1,0 +1,9 @@
+ChloeHuangCodes — date-only update (11/13/2026)
+
+Every HTML page in this package has the header date set to: This website was last updated on 11/13/2026.
+
+Pages: /, /general-5/, /opsiq-ai-ticket-triage/, /tiny-hoof-website/, /covid19-ai-chatbot/, /lead-collection/.
+
+To update GitHub without affecting any styling or images, edit the existing index.html in each of those six locations and replace the OLD date 07/09/2026 with 11/13/2026. You do not need to upload anything for this date-only change.
+
+The full ZIP is provided as a backup or for bulk upload. It includes the latest working versions available in this conversation for homepage, Projects, OpsIQ, Tiny Hoof, and draft versions for the other two pages. If you have edited the live GitHub versions since sharing them, do NOT overwrite them with the ZIP; use the date-only edit instead.
