@@ -50,6 +50,12 @@ body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2
     transform: translateY(35px);
   }
 }
+
+/* About Me: the full biography is always visible. */
+.about-expanded{margin-top:70px}
+.about .about-expanded p{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:14px;line-height:1.5;margin:0 0 48px}
+.about .about-expanded p:last-child{margin-bottom:8px}
+@media(max-width:700px){.about-expanded{margin-top:40px}.about .about-expanded p{margin-bottom:28px}}
 </style>
 </head><body>
 <header><div class="brand"><a href="./">ChloeHuangCodes</a><small>This website was last updated on 11/13/2026</small></div><nav class="nav portfolio-nav" aria-label="Main navigation">
@@ -65,7 +71,25 @@ body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2
 <main>
 <section class="cloud-banner" aria-label="Cloud banner featuring Chloe Huang's name and a black bird silhouette"></section>
 <section class="hero inner"><div class="hero-copy"><h1>Building thoughtful<br>software that<br><span class="accent">solves real problems.</span></h1><p>Software Engineer with full-stack and database experience,<br> focused on AI-powered applications and user-centric functions.</p><div class="actions"><a href="general-5/">View Projects <span aria-hidden="true">⟶</span></a><a href="lead-collection/">Download Resume <span aria-hidden="true">☁</span></a></div></div><img class="avatar" src="assets/chloe-avatar-original.jpg" alt="Chloe's red-haired illustrated avatar working on a laptop"></section>
-<section class="about inner"><img class="sun" src="assets/sun-icon.png" alt="Smiling hand-drawn sun"><div><h2>A little <span class="accent">about me</span></h2><p>Aloha! 🌊🌺 I’m Chloe, a software engineer with 4 years of experience.<br>Raised in Hawai‘i with a passion for problem-solving. Driven by curiosity, creativity, and kuleana....</p><a class="read-more" href="lead-collection/">Read more about me</a></div></section>
+<section class="about inner">
+  <img class="sun" src="assets/sun-icon.png" alt="Smiling hand-drawn sun">
+  <div>
+    <h2>A little <span class="accent">about me</span></h2>
+    <p>Aloha! 🌊🌺 I’m Chloe, a software engineer with 4 years of experience.<br>Raised in Hawai‘i with a passion for problem-solving. Driven by curiosity, creativity, and kuleana....</p>
+
+    <div class="about-expanded">
+      <p>I am raised in Hawai‘i from a young age, with a love for problem-solving, a passion for learning, and a strong sense of kuleana, responsibility to others and my community. These values guide both my life and my work as a software engineer with 4 years of experience.</p>
+
+      <p>I’m a software engineer with experience building and supporting production systems, with a strong focus on backend development, database-driven applications, and system reliability. In my current role, I develop and maintain production database systems and backend data workflows that support 26 city departments and over one million users. My work includes SQL Server migrations across legacy and modern environments, production troubleshooting, automation of database processes, and secure access management across large-scale systems.</p>
+
+      <p>Previously, I was part of Capgemini’s Next Gen Talent (NGT) Program, a leadership development program for high-potential engineers, where I progressed from Software Engineer to Senior Software Engineer. In this role, I developed and implemented customer-facing contact center and CRM solutions for a leading global investment bank using Salesforce and Genesys Cloud CX, and developed a full user interface for a Department of Defense client based on technical and user requirements.</p>
+
+      <p>I hold a B.S. in Computer Science and a B.A. in Political Science, graduating cum laude from Hawai‘i Pacific University, where I served as Student Body President during my senior year. My passion for software engineering began in high school, where I built an app prototype that earned me a four-year Biz4Good full-ride scholarship. Before graduating, I also had the privilege of serving as Student Body President at my high school.</p>
+
+      <p>Outside of software, I’m interested in the intersection of public policy and technology, particularly algorithmic decision-making in government and the ethical implications of data and AI in public life. I’m also interested in Asian American identity and representation.</p>
+      </div>
+  </div>
+</section>
 <section class="featured"><h2>Featured <span class="accent">Projects</span></h2><div class="projects-art"><a href="opsiq-ai-ticket-triage/" class="art opsiq" aria-label="OpsIQ Ticket Triage project"><img src="assets/opsiq-preview.jpg" alt="OpsIQ Ticket Triage project screenshot"></a><a href="tiny-hoof-website/" class="art tiny" aria-label="Tiny Hoof Website project"><img src="assets/tiny-hoof-preview.png" alt="Tiny Hoof Animal Therapy project screenshot"></a><a href="covid19-ai-chatbot/" class="art covid" aria-label="COVID-19 AI Chatbot project"><img src="assets/covid-chatbot-preview.png" alt="COVID-19 chatbot project screenshot"></a></div></section>
 <section class="cloud-contact"><div class="contact-box"><img class="plane" src="assets/paper-plane.png" alt="" aria-hidden="true"><div><p>Let’s build something amazing together.</p><div class="socials"><a href="lead-collection/" aria-label="Contact by email">✉</a><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://github.com/chloehuang2021" aria-label="GitHub">◧</a><a href="lead-collection/" aria-label="Resume">▤</a></div></div></div></section>
 </main><footer class="copyright">© 2026 Chloe Huang. All rights reserved.</footer>
@@ -92,6 +116,36 @@ body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2
       button.focus();
     }
   });
+})();
+</script>
+<script>
+/* Align the navigation's right edge with the cloud banner's right edge.
+   This changes only the header menu's horizontal placement. */
+(function () {
+  const menu = document.querySelector('header > nav.portfolio-nav');
+  const banner = document.querySelector('.cloud-banner');
+  if (!menu || !banner) return;
+
+  function alignNavigation() {
+    if (window.matchMedia('(max-width: 700px)').matches) {
+      menu.style.transform = '';
+      return;
+    }
+
+    // Reset our previous horizontal offset before measuring.
+    menu.style.transform = 'translateY(35px)';
+    const overflow = menu.getBoundingClientRect().right -
+                     banner.getBoundingClientRect().right;
+
+    // Only shift left if the menu extends beyond the banner.
+    // The cloud banner, avatar and main content are not moved.
+    const shiftLeft = Math.max(0, Math.ceil(overflow));
+    menu.style.transform = `translate(${-shiftLeft}px, 35px)`;
+  }
+
+  alignNavigation();
+  window.addEventListener('resize', alignNavigation);
+  window.addEventListener('load', alignNavigation);
 })();
 </script>
 </body></html>
