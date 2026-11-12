@@ -13,15 +13,6 @@ header{height:150px;display:flex;align-items:flex-start;justify-content:space-be
 @media(min-width:1450px){.inner{max-width:1040px}.hero-copy{padding-left:120px}.hero{column-gap:75px}}
 @media(max-width:1050px){.inner{max-width:780px}.hero{grid-template-columns:1fr 260px;gap:30px}.hero-copy{padding-left:35px}.hero .avatar{width:250px}.about,.featured{max-width:690px}}
 @media(max-width:700px){header{height:auto;min-height:125px;padding:22px 17px;flex-direction:column;gap:22px}header .brand a{font-size:19px}nav{margin:0;width:100%}nav a{flex:1;min-width:0;font-size:12px;padding:5px 7px}.cloud-banner{height:170px;background-position:center}.inner{padding-left:22px;padding-right:22px}.hero{display:flex;flex-direction:column-reverse;align-items:center;min-height:0;padding:35px 22px 75px;gap:22px}.hero .avatar{width:235px;height:245px}.hero-copy{padding:0}.hero h1{font-size:34px;margin-bottom:26px}.hero p{font-size:13px}.actions{flex-wrap:wrap;margin-top:30px;gap:10px}.about{display:block;min-height:0;padding:35px 22px 90px}.about .sun{width:94px;margin-bottom:15px}.featured{min-height:0;padding:25px 22px 90px}.featured h2{margin-bottom:30px}.projects-art{display:grid;gap:22px;height:auto}.art,.art.opsiq,.art.tiny,.art.covid{position:static;width:100%;height:auto;overflow:visible}.art img,.art.opsiq img{width:100%;height:auto;max-height:350px;object-fit:contain}.cloud-contact{min-height:240px}.contact-box{min-width:0;width:92%;padding:18px;gap:15px}.contact-box .plane{width:50px;height:50px}.contact-box p{font-size:15px}.socials{gap:23px}.copyright{height:130px}}
-
-
-/* Move navigation 35px lower without changing the layout */
-@media (min-width: 701px) {
-  header nav {
-    transform: translateY(35px);
-  }
-}
-
 </style><style>
 
 /* Click-to-open Projects navigation — consistent across all portfolio pages. */
@@ -52,6 +43,53 @@ body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2
  body:not(.home-page) header.resume-header{height:auto;min-height:126px;padding:22px 18px;display:block}
  body:not(.home-page) header.resume-header .portfolio-nav{margin-top:22px;width:100%}
 }
+
+/* Homepage menu positioning only. Keep hero, banner, avatar and all content unchanged. */
+@media (min-width: 701px) {
+  header > nav.portfolio-nav.portfolio-nav {
+    transform: translateY(35px);
+  }
+}
+
+/* About Me: show only the intro until the visitor asks to read more. */
+.about-expanded[hidden]{display:none!important}
+.about-expanded{margin-top:70px}
+.about .about-expanded p{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:14px;line-height:1.5;margin:0 0 48px}
+.about .about-expanded p:last-child{margin-bottom:8px}
+.about .about-toggle{display:inline-block;padding:0;border:0;background:transparent;color:#111;font-family:inherit;text-decoration:underline;text-align:left;cursor:pointer}
+.about .about-toggle:hover{color:var(--blue)}
+.about .about-toggle:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+@media(max-width:700px){.about-expanded{margin-top:40px}.about .about-expanded p{margin-bottom:28px}}
+
+/* Native HTML toggle: works without JavaScript. */
+.about .about-details{display:block}
+.about .about-details > summary{
+  list-style:none;
+  display:inline-block;
+  width:max-content;
+  max-width:100%;
+  font-size:17px;
+  font-weight:700;
+  font-family:inherit;
+  color:#111;
+  text-decoration:underline;
+  cursor:pointer;
+  padding:0;
+  background:none;
+}
+.about .about-details > summary::-webkit-details-marker{display:none}
+.about .about-details > summary::marker{content:""}
+.about .about-details > summary:hover{color:var(--blue)}
+.about .about-details > summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.about .about-less-label{display:none}
+.about .about-details[open] .about-more-label{display:none}
+.about .about-details[open] .about-less-label{display:inline}
+.about .about-details[open]{display:flex;flex-direction:column}
+.about .about-details[open] > summary{order:2;margin-top:4px}
+.about .about-details[open] > .about-expanded{order:1;margin-top:70px}
+.about .about-details .about-expanded p{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:14px;line-height:1.5;margin:0 0 48px}
+.about .about-details .about-expanded p:last-child{margin-bottom:8px}
+@media(max-width:700px){.about .about-details[open] > .about-expanded{margin-top:40px}.about .about-details .about-expanded p{margin-bottom:28px}}
 </style>
 </head><body>
 <header><div class="brand"><a href="./">ChloeHuangCodes</a><small>This website was last updated on 11/13/2026</small></div><nav class="nav portfolio-nav" aria-label="Main navigation">
@@ -66,9 +104,32 @@ body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2
 </nav></header>
 <main>
 <section class="cloud-banner" aria-label="Cloud banner featuring Chloe Huang's name and a black bird silhouette"></section>
-<section class="hero inner"><div class="hero-copy"><h1>Building thoughtful<br>software that<br><span class="accent">solves real problems.</span></h1><p>Software Engineer with full-stack and database experience,<br> focused on AI-powered applications and user-centric functions.</p><div class="actions"><a href="general-5/">View Projects <span aria-hidden="true">⟶</span></a><a href="lead-collection/">Download Resume <span aria-hidden="true">☁</span></a></div></div>
-<img class="avatar" src="./Chloe%20Avatar%205.jpg" alt="Chloe Avatar"></section>
-<section class="about inner"><img class="sun" src="assets/sun-icon.png" alt="Smiling hand-drawn sun"><div><h2>A little <span class="accent">about me</span></h2><p>Aloha! 🌊🌺 I’m Chloe, a software engineer with 4 years of experience.<br>Raised in Hawai‘i with a passion for problem-solving. Driven by curiosity, creativity, and kuleana....</p><a class="read-more" href="lead-collection/">Read more about me</a></div></section>
+<section class="hero inner"><div class="hero-copy"><h1>Building thoughtful<br>software that<br><span class="accent">solves real problems.</span></h1><p>Software Engineer with full-stack and database experience,<br> focused on AI-powered applications and user-centric functions.</p><div class="actions"><a href="general-5/">View Projects <span aria-hidden="true">⟶</span></a><a href="lead-collection/">Download Resume <span aria-hidden="true">☁</span></a></div></div><img class="avatar" src="assets/chloe-avatar-original.jpg" alt="Chloe's red-haired illustrated avatar working on a laptop"></section>
+<section class="about inner">
+  <img class="sun" src="assets/sun-icon.png" alt="Smiling hand-drawn sun">
+  <div>
+    <h2>A little <span class="accent">about me</span></h2>
+    <p>Aloha! 🌊🌺 I’m Chloe, a software engineer with 4 years of experience.<br>Raised in Hawai‘i with a passion for problem-solving. Driven by curiosity, creativity, and kuleana....</p>
+
+    <details class="about-details" id="about-details">
+      <summary class="read-more about-toggle">
+        <span class="about-more-label">Read more about me</span>
+        <span class="about-less-label">Read less</span>
+      </summary>
+      <div class="about-expanded">
+      <p>I am raised in Hawai‘i from a young age, with a love for problem-solving, a passion for learning, and a strong sense of kuleana, responsibility to others and my community. These values guide both my life and my work as a software engineer with 4 years of experience.</p>
+
+      <p>I’m a software engineer with experience building and supporting production systems, with a strong focus on backend development, database-driven applications, and system reliability. In my current role, I develop and maintain production database systems and backend data workflows that support 26 city departments and over one million users. My work includes SQL Server migrations across legacy and modern environments, production troubleshooting, automation of database processes, and secure access management across large-scale systems.</p>
+
+      <p>Previously, I was part of Capgemini’s Next Gen Talent (NGT) Program, a leadership development program for high-potential engineers, where I progressed from Software Engineer to Senior Software Engineer. In this role, I developed and implemented customer-facing contact center and CRM solutions for a leading global investment bank using Salesforce and Genesys Cloud CX, and developed a full user interface for a Department of Defense client based on technical and user requirements.</p>
+
+      <p>I hold a B.S. in Computer Science and a B.A. in Political Science, graduating cum laude from Hawai‘i Pacific University, where I served as Student Body President during my senior year. My passion for software engineering began in high school, where I built an app prototype that earned me a four-year Biz4Good full-ride scholarship. Before graduating, I also had the privilege of serving as Student Body President at my high school.</p>
+
+      <p>Outside of software, I’m interested in the intersection of public policy and technology, particularly algorithmic decision-making in government and the ethical implications of data and AI in public life. I’m also interested in Asian American identity and representation.</p>
+      </div>
+    </details>
+  </div>
+</section>
 <section class="featured"><h2>Featured <span class="accent">Projects</span></h2><div class="projects-art"><a href="opsiq-ai-ticket-triage/" class="art opsiq" aria-label="OpsIQ Ticket Triage project"><img src="assets/opsiq-preview.jpg" alt="OpsIQ Ticket Triage project screenshot"></a><a href="tiny-hoof-website/" class="art tiny" aria-label="Tiny Hoof Website project"><img src="assets/tiny-hoof-preview.png" alt="Tiny Hoof Animal Therapy project screenshot"></a><a href="covid19-ai-chatbot/" class="art covid" aria-label="COVID-19 AI Chatbot project"><img src="assets/covid-chatbot-preview.png" alt="COVID-19 chatbot project screenshot"></a></div></section>
 <section class="cloud-contact"><div class="contact-box"><img class="plane" src="assets/paper-plane.png" alt="" aria-hidden="true"><div><p>Let’s build something amazing together.</p><div class="socials"><a href="lead-collection/" aria-label="Contact by email">✉</a><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://github.com/chloehuang2021" aria-label="GitHub">◧</a><a href="lead-collection/" aria-label="Resume">▤</a></div></div></div></section>
 </main><footer class="copyright">© 2026 Chloe Huang. All rights reserved.</footer>
