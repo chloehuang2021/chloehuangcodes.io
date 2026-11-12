@@ -13,6 +13,25 @@ header{height:150px;display:flex;align-items:flex-start;justify-content:space-be
 @media(min-width:1450px){.inner{max-width:1040px}.hero-copy{padding-left:120px}.hero{column-gap:75px}}
 @media(max-width:1050px){.inner{max-width:780px}.hero{grid-template-columns:1fr 260px;gap:30px}.hero-copy{padding-left:35px}.hero .avatar{width:250px}.about,.featured{max-width:690px}}
 @media(max-width:700px){header{height:auto;min-height:125px;padding:22px 17px;flex-direction:column;gap:22px}header .brand a{font-size:19px}nav{margin:0;width:100%}nav a{flex:1;min-width:0;font-size:12px;padding:5px 7px}.cloud-banner{height:170px;background-position:center}.inner{padding-left:22px;padding-right:22px}.hero{display:flex;flex-direction:column-reverse;align-items:center;min-height:0;padding:35px 22px 75px;gap:22px}.hero .avatar{width:235px;height:245px}.hero-copy{padding:0}.hero h1{font-size:34px;margin-bottom:26px}.hero p{font-size:13px}.actions{flex-wrap:wrap;margin-top:30px;gap:10px}.about{display:block;min-height:0;padding:35px 22px 90px}.about .sun{width:94px;margin-bottom:15px}.featured{min-height:0;padding:25px 22px 90px}.featured h2{margin-bottom:30px}.projects-art{display:grid;gap:22px;height:auto}.art,.art.opsiq,.art.tiny,.art.covid{position:static;width:100%;height:auto;overflow:visible}.art img,.art.opsiq img{width:100%;height:auto;max-height:350px;object-fit:contain}.cloud-contact{min-height:240px}.contact-box{min-width:0;width:92%;padding:18px;gap:15px}.contact-box .plane{width:50px;height:50px}.contact-box p{font-size:15px}.socials{gap:23px}.copyright{height:130px}}
+
+/* About Me: expandable biography (collapsed until the visitor clicks) */
+.about #about-full-bio[hidden] { display: none !important; }
+.about .about-toggle {
+  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  color: #111;
+  margin: 4px 0 0;
+  padding: 0;
+  font: 700 17px/1.4 Arial, Helvetica, sans-serif;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.about .about-toggle:hover { color: var(--blue); }
+.about .about-toggle:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 </style><style>
 
 /* Click-to-open Projects navigation — consistent across all portfolio pages. */
@@ -84,7 +103,7 @@ body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2
     <h2>A little <span class="accent">about me</span></h2>
     <p>Aloha! 🌊🌺 I’m Chloe, a software engineer with 4 years of experience.<br>Raised in Hawai‘i with a passion for problem-solving. Driven by curiosity, creativity, and kuleana....</p>
 
-    <div class="about-expanded">
+    <div class="about-expanded" id="about-full-bio" hidden>
       <p>I am raised in Hawai‘i from a young age, with a love for problem-solving, a passion for learning, and a strong sense of kuleana, responsibility to others and my community. These values guide both my life and my work as a software engineer with 4 years of experience.</p>
 
       <p>I’m a software engineer with experience building and supporting production systems, with a strong focus on backend development, database-driven applications, and system reliability. In my current role, I develop and maintain production database systems and backend data workflows that support 26 city departments and over one million users. My work includes SQL Server migrations across legacy and modern environments, production troubleshooting, automation of database processes, and secure access management across large-scale systems.</p>
@@ -95,6 +114,11 @@ body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2
 
       <p>Outside of software, I’m interested in the intersection of public policy and technology, particularly algorithmic decision-making in government and the ethical implications of data and AI in public life. I’m also interested in Asian American identity and representation.</p>
       </div>
+    <button type="button" class="about-toggle" id="about-toggle"
+      aria-expanded="false" aria-controls="about-full-bio"
+      onclick="var bio=document.getElementById('about-full-bio');var expand=bio.hidden;bio.hidden=!expand;this.setAttribute('aria-expanded', String(expand));this.textContent=expand?'Read less':'Read more about me';">
+      Read more about me
+    </button>
   </div>
 </section>
 <section class="featured"><h2>Featured <span class="accent">Projects</span></h2><div class="projects-art"><a href="opsiq-ai-ticket-triage/" class="art opsiq" aria-label="OpsIQ Ticket Triage project"><img src="assets/opsiq-preview.jpg" alt="OpsIQ Ticket Triage project screenshot"></a><a href="tiny-hoof-website/" class="art tiny" aria-label="Tiny Hoof Website project"><img src="assets/tiny-hoof-preview.png" alt="Tiny Hoof Animal Therapy project screenshot"></a><a href="covid19-ai-chatbot/" class="art covid" aria-label="COVID-19 AI Chatbot project"><img src="assets/covid-chatbot-preview.png" alt="COVID-19 chatbot project screenshot"></a></div></section>
