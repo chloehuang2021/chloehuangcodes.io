@@ -1,84 +1,152 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>COVID-19 AI Chatbot | ChloeHuangCodes</title><meta name="description" content="COVID-19 AI Chatbot software engineering project by Chloe Huang."><style>
-:root{--accent:#679dca;--ink:#111;--soft:#e0e9eb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:white;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300}a{color:inherit}a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.site-header{height:150px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px}.brand{font-size:19px;line-height:1.15;text-decoration:none}.updated{font-size:10.5px;margin-top:9px}.nav{display:flex;align-items:center;margin-top:2px}.nav a{padding:10px 35px;text-align:center;text-decoration:none;font-size:14px;min-width:176px}.nav a+a{border-left:2px solid #222}.nav .current{color:#789db7}
-.title-band{height:205px;background:#c3dce9 url('../assets/cloud-texture.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20px}.title-band h1{font-size:46px;line-height:1.15;font-weight:700;margin:0}
-.content{max-width:840px;margin:0 auto;padding:70px 24px 100px}.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start;margin-bottom:70px}.category{font-size:14px;color:var(--accent);margin:0 0 13px}.hero h2{font-size:27px;margin:0 0 22px;font-weight:600}.intro p{line-height:1.65;margin:0 0 15px;color:#353535}.hero img{display:block;width:100%;height:auto;object-fit:contain;border-radius:7px}
-.action{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--soft);border-radius:32px;padding:10px 20px;margin:12px 0 0;text-decoration:none;font-weight:400}.action:hover{background:#ccdce0}.action span{display:inline-flex;align-items:center;justify-content:center;line-height:1;transform:translateY(-1px);font-size:20px}
-.section{margin:0 0 58px}.section h3{font-size:19px;letter-spacing:.03em;margin:0 0 18px;font-weight:700}.section p,.section li{font-size:14px;line-height:1.72;color:#353535}.section ul{padding-left:22px;margin:0}.section li{margin:0 0 9px}.tech{color:var(--accent)!important}.section a{color:#467eac}.back{display:inline-block;margin:22px 0 0;color:#467eac}
-.footer-cloud{height:238px;background:#c3dce9 url('../assets/cloud-texture.png') center/cover no-repeat}.copyright{height:210px;display:flex;align-items:center;justify-content:center;font-size:11px}
-@media(max-width:920px){.nav a{min-width:0;padding:10px 22px}}
-@media(max-width:650px){.site-header{height:auto;min-height:126px;padding:22px 18px;display:block}.nav{margin-top:22px;justify-content:space-between}.nav a{flex:1;padding:8px 6px;font-size:12px}.title-band{height:150px}.title-band h1{font-size:32px}.content{padding:45px 22px 70px}.hero{grid-template-columns:1fr;gap:28px;margin-bottom:48px}.hero h2{font-size:23px}.section{margin-bottom:42px}.footer-cloud{height:160px}.copyright{height:130px}}
-</style><style>
-
-/* Click-to-open Projects navigation — consistent across all portfolio pages. */
-.portfolio-nav.portfolio-nav{display:flex;align-items:stretch;gap:0;width:auto;margin-top:2px;padding:0;max-width:none;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;position:relative;z-index:30}
-.portfolio-nav .nav-entry{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 176px;min-width:0;min-height:39px;padding:9px 13px;border:0;background:transparent;text-align:center;color:#161616;font-family:inherit;font-size:14px;font-weight:300;line-height:1.35;text-decoration:none;white-space:nowrap;cursor:pointer}
-.portfolio-nav .nav-entry + .nav-entry{border-left:2px solid #2a2a2a}
-.portfolio-nav .portfolio-dropdown-wrap{padding:0;cursor:default}
-.portfolio-nav .portfolio-trigger{width:100%;height:100%;min-height:39px;padding:9px 13px;display:flex;align-items:center;justify-content:center;background:none;border:0;color:inherit;font:inherit;line-height:1.35;cursor:pointer}
-.portfolio-nav .nav-entry.current,.portfolio-nav .portfolio-trigger.current,.portfolio-nav .portfolio-trigger[aria-expanded="true"]{color:#789db7}
-.portfolio-nav .portfolio-trigger:focus-visible,.portfolio-nav .nav-entry:focus-visible,.portfolio-nav .portfolio-menu a:focus-visible{outline:2px solid #679dca;outline-offset:2px}
-.portfolio-nav .portfolio-menu[hidden]{display:none!important}
-.portfolio-nav .portfolio-menu{position:absolute;top:100%;left:0;z-index:100;display:block;width:315px;max-width:calc(100vw - 30px);margin:0;background:#fff;border:1px solid #888;box-shadow:0 5px 13px rgba(0,0,0,.12)}
-.portfolio-nav .portfolio-menu a{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;height:auto;min-height:51px;margin:0;padding:11px 14px;border:0;background:#fff;color:#111;text-align:center;text-decoration:none;font-family:inherit;font-size:14px;font-weight:300;line-height:1.3;white-space:normal;flex:none}
-.portfolio-nav .portfolio-menu a+a{border:0;border-top:1px solid #888}
-.portfolio-nav .portfolio-menu a:hover,.portfolio-nav .portfolio-menu a:focus-visible{background:#f0f6f9;color:#679dca}
-.portfolio-nav .portfolio-menu a.current,.portfolio-nav .portfolio-menu a[aria-current="page"]{color:#679dca;background:#f3f8fb}
-/* Only the Resume page uses an older stylesheet; align its header with the other pages. */
-body:not(.home-page) header.resume-header{height:150px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative;top:auto;z-index:20;border-bottom:0;background:white}
-.resume-header .resume-brand{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:19px;line-height:1.15;text-decoration:none;letter-spacing:0}
-.resume-header .resume-updated{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:300;margin-top:9px;color:#111;padding:0;text-align:left}
-body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2px 0 0;padding:0;display:flex;justify-content:flex-start;gap:0}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Real-Time Conversational AI COVID-19 Chatbot project by Chloe Huang.">
+<title>COVID-19 Chatbot | ChloeHuangCodes</title>
+<style>
+:root{--accent:#679dca;--ink:#111;--soft:#e0e9eb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#fff;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+/* Same page header and project dropdown as the finished portfolio */
+.site-header{height:164px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative;z-index:10}
+.brand{font-size:19px;line-height:1.15;text-decoration:none;font-weight:400;display:block}
+.updated{font-size:10.5px;margin-top:9px}
+.portfolio-nav{display:flex;align-items:stretch;gap:0;width:auto;margin-top:2px;position:relative;z-index:20;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300}
+.nav-entry{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 176px;min-height:39px;padding:9px 13px;text-align:center;text-decoration:none;font-size:14px;font-weight:300;line-height:1.35;white-space:nowrap;border:0;background:transparent;cursor:pointer}
+.nav-entry+.nav-entry{border-left:2px solid #2a2a2a}
+.portfolio-dropdown-wrap{padding:0;cursor:default}
+.portfolio-trigger{width:100%;height:100%;min-height:39px;padding:9px 13px;display:flex;align-items:center;justify-content:center;border:0;background:none;color:#789db7;font:inherit;cursor:pointer}
+.portfolio-trigger[aria-expanded="true"]{color:#679dca}
+.portfolio-menu[hidden]{display:none!important}
+.portfolio-menu{position:absolute;top:100%;left:0;z-index:100;width:315px;max-width:calc(100vw - 30px);background:#fff;border:1px solid #888;box-shadow:0 5px 13px #0002}
+.portfolio-menu a{display:flex;align-items:center;justify-content:center;min-height:51px;padding:11px 14px;border:0;text-decoration:none;color:#111;font-size:14px;font-weight:300;line-height:1.3;text-align:center;white-space:normal}
+.portfolio-menu a+a{border-top:1px solid #888}
+.portfolio-menu a:hover,.portfolio-menu a:focus-visible{background:#f0f6f9;color:#679dca}
+.portfolio-menu a.current{color:#679dca;background:#f3f8fb}
+/* Wix detail-page layout: a tall cloud column, with text on the right. */
+.detail-layout{display:grid;grid-template-columns:minmax(0,31%) minmax(0,38%);column-gap:14%;align-items:stretch;margin:0 4.15%}
+.visual-rail{min-height:1530px;background:#c3dce9 url('../assets/covid-cloud-rail.jpg') center top/cover no-repeat}
+.content{padding:32px 0 107px;min-width:0;font-size:14px;font-weight:300;line-height:1.36}
+.eyebrow{color:var(--accent);font-size:17px;font-weight:600;margin:0 0 29px}
+h1{font-size:52px;line-height:1.17;letter-spacing:-.02em;font-weight:700;margin:0 0 42px;max-width:660px}
+.live-link{display:inline-block;color:#f33;font-size:19px;font-weight:600;text-decoration:underline;margin:0 0 42px}
+.live-link-placeholder{cursor:default}
+.intro{max-width:645px;color:#333}
+.intro p{margin:0 0 19px;line-height:1.37}
+.intro a,.special a{color:#366dc6;text-decoration:underline;overflow-wrap:anywhere}
+.section-title{font-size:14px;font-weight:600;color:#3f9bd3;line-height:1.3;margin:0 0 22px}
+.stack-section{margin-top:93px}
+.stack-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 35px;max-width:370px;line-height:1.8}
+.info-row{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:72px;margin-top:103px}
+.info-row ul,.special ul{margin:0;padding-left:25px}
+.info-row li,.special li{margin:0 0 5px;line-height:1.38}
+.special{margin-top:90px;max-width:380px}
+.copyright{height:210px;background:#ebe9e9;display:flex;justify-content:center;align-items:center;font-size:11px}
+@media(max-width:1150px){
+ .detail-layout{grid-template-columns:minmax(0,40%) minmax(0,51%);gap:7%;margin:0 3%}
+ .visual-rail{min-height:1280px}
+ h1{font-size:clamp(34px,4vw,52px)}
+ .info-row{gap:26px}
+ .nav-entry{flex-basis:150px}
+}
 @media(max-width:700px){
- .portfolio-nav.portfolio-nav{width:100%;margin-top:10px;justify-content:space-between}
- .portfolio-nav .nav-entry{flex:1 1 33.333%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}
- .portfolio-nav .portfolio-trigger{font-size:12px;min-height:34px;padding:7px 4px}
- .portfolio-nav .portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}
- .portfolio-nav .portfolio-menu a{font-size:13px;min-height:48px}
- body:not(.home-page) header.resume-header{height:auto;min-height:126px;padding:22px 18px;display:block}
- body:not(.home-page) header.resume-header .portfolio-nav{margin-top:22px;width:100%}
+ .site-header{height:auto;min-height:126px;padding:22px 18px;display:block}
+ .portfolio-nav{margin-top:22px;width:100%;justify-content:space-between}
+ .nav-entry{flex:1 1 33.33%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}
+ .portfolio-trigger{font-size:12px;min-height:34px;padding:7px 4px}
+ .portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}
+ .portfolio-menu a{font-size:13px;min-height:48px}
+ .detail-layout{display:flex;flex-direction:column;margin:0}
+ .content{order:1;padding:35px 22px 68px}
+ .visual-rail{order:2;min-height:180px;background-position:center center}
+ .eyebrow{font-size:14px;margin-bottom:18px}
+ h1{font-size:35px;margin-bottom:28px}
+ .live-link{font-size:17px;margin-bottom:29px}
+ .stack-section{margin-top:46px}
+ .info-row{margin-top:54px;gap:35px;grid-template-columns:1fr}
+ .special{margin-top:55px}
+ .copyright{height:130px}
 }
 </style>
 </head>
-<body><header class="site-header"><div><a class="brand" href="../">ChloeHuangCodes</a><div class="updated">This website was last updated on 11/13/2026</div></div><nav class="nav portfolio-nav" aria-label="Main navigation">
-  <a class="nav-entry" href="../">About Me</a>
-  <div class="nav-entry portfolio-dropdown-wrap">
-    <button class="portfolio-trigger current" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="portfolio-project-menu">Projects</button>
-    <div class="portfolio-menu" id="portfolio-project-menu" hidden>
-      <a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a><a href="../tiny-hoof-website/">Tiny Hoof Website</a><a href="./" class="current" aria-current="page">COVID-19 AI Chatbot</a>
+<body>
+<header class="site-header">
+  <div><a class="brand" href="../">ChloeHuangCodes</a><div class="updated">This website was last updated on 11/13/2026</div></div>
+  <nav class="portfolio-nav" aria-label="Main navigation">
+    <a class="nav-entry" href="../">About Me</a>
+    <div class="nav-entry portfolio-dropdown-wrap">
+      <button class="portfolio-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="portfolio-project-menu">Projects</button>
+      <div class="portfolio-menu" id="portfolio-project-menu" hidden>
+        <a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a>
+        <a href="../tiny-hoof-website/">Tiny Hoof Website</a>
+        <a href="./" class="current" aria-current="page">COVID-19 AI Chatbot</a>
+      </div>
     </div>
-  </div>
-  <a class="nav-entry" href="../lead-collection/">Resume &amp; Contact</a>
-</nav></header>
-<section class="title-band"><h1>COVID-19 AI Chatbot</h1></section>
-<main class="content"><section class="hero"><div class="intro"><p class="category">AI / NLP</p><h2>COVID-19 AI Chatbot</h2><p>Real-time interactive chatbot with voice-to-text capabilities for COVID-19 related questions. The project used official government sources and could direct users to relevant agencies for further information.</p><p>Built for desktop and mobile, designed not to collect personally identifiable information.</p><p><a class="action" href="https://github.com/chloehuang2021/covid-19_chatbot" target="_blank" rel="noopener noreferrer">Live Demo / Repository<span aria-hidden="true">⟶</span></a></p></div><img src="../assets/covid-conversation.png" alt="COVID-19 AI Chatbot screenshot" loading="eager"></section>
-<section class="section"><h3>TECH STACK</h3><div class="section-body tech"><p>HTML/CSS · JavaScript · Vue · Sass</p></div></section><section class="section"><h3>WHAT I BUILT / WORKED ON</h3><div class="section-body"><ul><li>Trained conversational agents using Dialogflow intents, phrases, actions and responses.</li><li>Architected conversational flows integrating 4 agents, 50 intents, 400 phrases, 50 actions, and 200 responses.</li><li>Added timestamps with JavaScript and Node.js.</li><li>Optimized chatbot accuracy through conversational AI improvements.</li></ul></div></section><section class="section"><h3>INSIDE THE BUILD</h3><div class="section-body"><ul class="features"><li>Real-time COVID-19 updates</li><li>Government-verified information</li><li>Open-ended Q&amp;A</li><li>Voice-to-text interaction</li><li>Desktop &amp; mobile support</li><li>Privacy-first experience</li></ul></div></section><section class="section"><h3>SPECIAL MENTIONS</h3><div class="section-body">Finalist of the 2020 Hawai‘i Annual Coding Challenge.</div></section><a class="back" href="../general-5/">← Back to Projects</a></main>
-<footer><div class="footer-cloud"></div><div class="copyright">© 2026 Chloe Huang. All rights reserved.</div></footer>
+    <a class="nav-entry" href="../lead-collection/">Resume &amp; Contact</a>
+  </nav>
+</header>
+<main class="detail-layout">
+  <aside class="visual-rail" aria-hidden="true"></aside>
+  <article class="content">
+    <p class="eyebrow">AI/NLP</p>
+    <h1>Real-Time<br>Conversational AI<br>COVID-19 Chatbot</h1>
+    <!-- Original live-demo destination was not included in the screenshots. Preserve the label without inventing a URL. -->
+    <span class="live-link live-link-placeholder" title="Live Demo URL needs to be added">🚀▶️ Live Demo</span>
+
+    <div class="intro">
+      <p>This is a real-time interactive chatbot with a voice-to-text function to deliver updated COVID-19 related information. All information were from government official website to ensure the accuracy and credibility of information. All Information is extracted from the state’s websites: <a href="https://hawaiicovid19.com/" target="_blank" rel="noopener noreferrer">https://hawaiicovid19.com/</a> and <a href="https://health.hawaii.gov/coronavirusdisease2019/" target="_blank" rel="noopener noreferrer">https://health.hawaii.gov/coronavirusdisease2019/</a>. In this 24-7 available app, you can ask the chatbot open-ended COVID-19 related questions and receive a response. The chatbot will provide an accurate answer to the user’s question or direct the user to the appropriate agency (DOH, DOT, physician, etc) for more information. This Chatbot will function on multiple platforms (desktop and mobile) and will NOT collect Personally identifiable information. In addition, the chatbot has voice-to-text capabilities.</p>
+    </div>
+
+    <section class="stack-section" aria-labelledby="stack-heading">
+      <h2 class="section-title" id="stack-heading">TECH STACK</h2>
+      <div class="stack-grid"><div>🌐 HTML/CSS</div><div>🟢 Vue</div><div>⚡ JavaScript</div><div>🎨 Sass</div></div>
+    </section>
+
+    <div class="info-row">
+      <section aria-labelledby="worked-heading">
+        <h2 class="section-title" id="worked-heading">WHAT I WORKED ON</h2>
+        <ul>
+          <li>Trained the chatbot with conversations and scenarios by implementing training agents like intents, phrases, actions, and responses into Dialogflow, a Google natural language understanding platform.</li>
+          <li>Architected conversational flow integrating 4 agents, 50 intents, 400 phrases, 50 actions, and 200 responses.</li>
+          <li>Installed the timestamp function that shows time zone, minutes, and seconds with JavaScript and Node.js.</li>
+          <li>Optimized chatbot accuracy by 10% through implementation of conversational AI components.</li>
+        </ul>
+      </section>
+      <section aria-labelledby="inside-heading">
+        <h2 class="section-title" id="inside-heading">INSIDE THE BUILD</h2>
+        <ul>
+          <li>Real-time COVID-19 updates</li>
+          <li>Government-verified information</li>
+          <li>Open-ended conversational Q&amp;A</li>
+          <li>Voice-to-text interaction</li>
+          <li>Desktop &amp; mobile support</li>
+          <li>Privacy-first experience</li>
+          <li>Available 24/7</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="special" aria-labelledby="mentions-heading">
+      <h2 class="section-title" id="mentions-heading">SPECIAL MENTIONS</h2>
+      <ul><li>Finalist of the 2020 Hawai‘i Annual Coding Challenge. 3-minute pitch video (<span style="color:#366dc6;text-decoration:underline" title="Add original pitch video URL">Link</span>).</li></ul>
+    </section>
+  </article>
+</main>
+<footer><div class="copyright">© 2026 Chloe Huang. All rights reserved.</div></footer>
 <script>
 (function(){
-  const dropdown = document.querySelector('.portfolio-dropdown-wrap');
-  if (!dropdown) return;
-  const button = dropdown.querySelector('.portfolio-trigger');
-  const menu = dropdown.querySelector('.portfolio-menu');
-  function setOpen(open){
-    button.setAttribute('aria-expanded', String(open));
-    menu.hidden = !open;
-  }
-  button.addEventListener('click', function(event){
-    event.stopPropagation();
-    setOpen(button.getAttribute('aria-expanded') !== 'true');
-  });
-  document.addEventListener('click', function(event){
-    if (!dropdown.contains(event.target)) setOpen(false);
-  });
-  document.addEventListener('keydown', function(event){
-    if (event.key === 'Escape' && !menu.hidden){
-      setOpen(false);
-      button.focus();
-    }
-  });
+ const dropdown=document.querySelector('.portfolio-dropdown-wrap');
+ const button=dropdown.querySelector('.portfolio-trigger');
+ const menu=dropdown.querySelector('.portfolio-menu');
+ function setOpen(open){button.setAttribute('aria-expanded',String(open));menu.hidden=!open;}
+ button.addEventListener('click',function(event){event.stopPropagation();setOpen(button.getAttribute('aria-expanded')!=='true');});
+ document.addEventListener('click',function(event){if(!dropdown.contains(event.target))setOpen(false);});
+ document.addEventListener('keydown',function(event){if(event.key==='Escape'&&!menu.hidden){setOpen(false);button.focus();}});
 })();
 </script>
-</body></html>
+</body>
+</html>
