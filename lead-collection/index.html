@@ -12,22 +12,30 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#fff;color:var(--ink);font:300 14px/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
-/* Same header and click-to-open Projects menu used elsewhere on the site. */
-.site-header{height:150px;padding:39px 30px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;position:relative;z-index:10;background:#fff}
-.brand{font-size:19px;line-height:1.15;text-decoration:none;font-weight:400;display:block}
-.updated{font-size:10.5px;margin-top:9px}
-.portfolio-nav{display:flex;align-items:stretch;margin-top:2px;position:relative;z-index:20;font-size:14px;font-weight:300}
-.nav-entry{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 176px;min-height:39px;padding:9px 13px;text-align:center;text-decoration:none;font-size:14px;line-height:1.35;white-space:nowrap;border:0;background:transparent;cursor:pointer}
-.nav-entry+.nav-entry{border-left:2px solid #2a2a2a}
-.nav-entry.current{color:var(--nav-active)}
-.portfolio-dropdown-wrap{padding:0}
-.portfolio-trigger{width:100%;height:100%;min-height:39px;display:flex;align-items:center;justify-content:center;border:0;background:none;color:#111;font:inherit;cursor:pointer}
-.portfolio-trigger[aria-expanded="true"]{color:var(--nav-active)}
-.portfolio-menu[hidden]{display:none!important}
-.portfolio-menu{position:absolute;top:100%;left:0;z-index:100;width:315px;max-width:calc(100vw - 30px);background:#fff;border:1px solid #888;box-shadow:0 5px 13px #0002}
-.portfolio-menu a{display:flex;align-items:center;justify-content:center;min-height:51px;padding:11px 14px;border:0;text-decoration:none;color:#111;font-size:14px;line-height:1.3;text-align:center;white-space:normal}
-.portfolio-menu a+a{border-top:1px solid #888}
-.portfolio-menu a:hover,.portfolio-menu a:focus-visible{background:#f0f6f9;color:var(--blue)}
+/* Header and dropdown: matches the redesigned About Me and Projects pages. */
+:root{--blue-deep:#2e5d78}
+button{font:inherit}
+.shell{width:min(1160px,calc(100% - 64px));margin-inline:auto}
+.site-header{background:white;position:relative;z-index:20;border-bottom:1px solid #edf1f3}
+.header-row{min-height:112px;display:flex;justify-content:space-between;align-items:center;gap:32px}
+.brand-name{display:block;font-size:21px;font-weight:500;letter-spacing:-.045em;text-decoration:none;line-height:1.3;color:#172b34}
+.updated{display:block;margin-top:7px;font-size:11px;letter-spacing:.01em;color:#667b85;line-height:1.3}
+.main-nav{display:flex;align-items:stretch;gap:0;margin-left:auto}
+.nav-link,.nav-trigger{font:400 14px/1.35 "Helvetica Neue",Helvetica,Arial,sans-serif;display:flex;align-items:center;justify-content:center;text-decoration:none;white-space:nowrap;padding:13px 25px;border:0;background:transparent;color:#334955;min-height:44px;cursor:pointer}
+.nav-link+.dropdown,.dropdown+.nav-link{border-left:1px solid #a9bbc3}
+.nav-link:hover,.nav-trigger:hover,.nav-link[aria-current=page]{color:var(--blue-deep)}
+.nav-link[aria-current=page]{font-weight:600}
+.dropdown{position:relative}
+.nav-trigger{gap:7px}
+.nav-trigger svg{width:15px;height:15px;transition:transform .18s ease}
+.nav-trigger[aria-expanded=true]{color:var(--blue-deep)}
+.nav-trigger[aria-expanded=true] svg{transform:rotate(180deg)}
+.project-menu[hidden]{display:none}
+.project-menu{position:absolute;top:calc(100% + 11px);left:50%;transform:translateX(-50%);width:285px;z-index:30;background:white;box-shadow:0 18px 50px #14324429;border:1px solid #dae4e9;border-radius:12px;padding:8px}
+.project-menu a{display:block;padding:13px 14px;font-size:14px;line-height:1.4;text-decoration:none;color:#314e60;border-radius:8px}
+.project-menu a:hover,.project-menu a:focus-visible{background:#eef5f8;color:var(--blue-deep)}
+.project-menu a+a{border-top:1px solid #eef1f3}
+.project-menu .all-projects{font-weight:600;color:var(--blue-deep);background:#f0f6f9}
 /* Calm sky banner matches the visual language on the Projects overview. */
 .title-band{min-height:195px;background:#c5dde9 url('../assets/cloud-texture.png') center center/cover no-repeat;display:flex;justify-content:center;align-items:center;text-align:center;padding:38px 20px}
 .title-band h1{font-size:46px;font-weight:600;line-height:1.12;letter-spacing:-.025em;margin:0;color:#151515}
@@ -48,26 +56,35 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .direct-link .value{font-size:14px;color:#416e8d;overflow-wrap:anywhere}
 .contact-note{font-size:12px;color:#64717b;margin:16px 0 0}
 .copyright{height:145px;display:flex;align-items:center;justify-content:center;font-size:11px;text-align:center;padding:20px;background:#fff}
-@media(max-width:900px){.site-header{height:auto;min-height:126px;padding:22px 18px;display:block}.portfolio-nav{margin-top:22px;width:100%;justify-content:space-between}.nav-entry{flex:1 1 33.3%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}.portfolio-trigger{min-height:34px;font-size:12px;padding:7px 4px}.portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}.portfolio-menu a{font-size:13px;min-height:48px}.title-band{min-height:150px}.title-band h1{font-size:38px}.main-area{padding:40px 20px 60px}.panel{padding:30px 28px;min-height:0}.contact-grid{gap:20px}.panel h2{font-size:27px}}
+@media(max-width:900px){.title-band{min-height:150px}.title-band h1{font-size:38px}.main-area{padding:40px 20px 60px}.panel{padding:30px 28px;min-height:0}.contact-grid{gap:20px}.panel h2{font-size:27px}}
+@media(max-width:1020px){.shell{width:min(100% - 48px,900px)}.header-row{gap:18px}.nav-link,.nav-trigger{padding-inline:18px}}
+@media(max-width:750px){.header-row{min-height:0;display:block;padding-block:20px}.main-nav{margin:21px -7px 0;justify-content:space-between}.nav-link,.nav-trigger{padding:10px 10px;font-size:13px}.nav-link+.dropdown,.dropdown+.nav-link{border-color:#ccd8de}}
+@media(max-width:520px){.shell{width:calc(100% - 36px)}.brand-name{font-size:20px}.updated{font-size:10px}.main-nav{margin-inline:-4px}.nav-link,.nav-trigger{font-size:12px;padding:8px 9px}.nav-trigger{gap:3px}.nav-trigger svg{width:13px;height:13px}.project-menu{left:50%;width:min(280px,calc(100vw - 36px))}}
 @media(max-width:650px){.contact-grid{grid-template-columns:1fr}.panel{padding:30px 26px;min-height:0}.title-band h1{font-size:34px}.copyright{height:115px}.direct-link .value{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.primary-link{transition:none}}
 </style>
 </head>
 <body>
-<header class="site-header">
-  <div><a class="brand" href="../">ChloeHuangCodes</a><div class="updated">This website was last updated on 11/13/2026</div></div>
-  <nav class="portfolio-nav" aria-label="Main navigation">
-    <a class="nav-entry" href="../">About Me</a>
-    <div class="nav-entry portfolio-dropdown-wrap">
-      <button class="portfolio-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="portfolio-project-menu">Projects</button>
-      <div class="portfolio-menu" id="portfolio-project-menu" hidden>
-        <a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a>
-        <a href="../tiny-hoof-website/">Tiny Hoof Website</a>
-        <a href="../covid19-ai-chatbot/">COVID-19 AI Chatbot</a>
-      </div>
+<header class="site-header" id="top">
+  <div class="header-row shell">
+    <div class="brand">
+      <a class="brand-name" href="../">ChloeHuangCodes</a>
+      <span class="updated">This website was last updated on 11/13/2026</span>
     </div>
-    <a class="nav-entry current" aria-current="page" href="./">Resume &amp; Contact</a>
-  </nav>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link" href="../">About Me</a>
+      <div class="dropdown">
+        <button class="nav-trigger" type="button" id="projects-toggle" aria-expanded="false" aria-controls="projects-menu" aria-haspopup="true">Projects <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="project-menu" id="projects-menu" hidden>
+          <a class="all-projects" href="../general-5/">All Projects</a>
+          <a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a>
+          <a href="../tiny-hoof-website/">Tiny Hoof Website</a>
+          <a href="../covid19-ai-chatbot/">COVID-19 AI Chatbot</a>
+        </div>
+      </div>
+      <a class="nav-link" href="./" aria-current="page">Resume &amp; Contact</a>
+    </nav>
+  </div>
 </header>
 <main>
   <section class="title-band" aria-labelledby="page-title"><h1 id="page-title">Resume &amp; Contact</h1></section>
@@ -93,13 +110,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 <footer class="copyright">© 2026 Chloe Huang. All rights reserved.</footer>
 <script>
 (function(){
-  const dropdown=document.querySelector('.portfolio-dropdown-wrap');
-  const button=dropdown.querySelector('.portfolio-trigger');
-  const menu=dropdown.querySelector('.portfolio-menu');
-  function setOpen(open){button.setAttribute('aria-expanded',String(open));menu.hidden=!open;}
-  button.addEventListener('click',function(event){event.stopPropagation();setOpen(button.getAttribute('aria-expanded')!=='true');});
-  document.addEventListener('click',function(event){if(!dropdown.contains(event.target))setOpen(false);});
-  document.addEventListener('keydown',function(event){if(event.key==='Escape'&&!menu.hidden){setOpen(false);button.focus();}});
+  var toggle=document.getElementById('projects-toggle');
+  var menu=document.getElementById('projects-menu');
+  if(!toggle||!menu)return;
+  function setOpen(open){toggle.setAttribute('aria-expanded',String(open));menu.hidden=!open;}
+  toggle.addEventListener('click',function(e){e.stopPropagation();setOpen(menu.hidden);});
+  document.addEventListener('click',function(e){if(!menu.contains(e.target)&&e.target!==toggle&&!toggle.contains(e.target))setOpen(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden){setOpen(false);toggle.focus();}});
 })();
 </script>
 </body>
