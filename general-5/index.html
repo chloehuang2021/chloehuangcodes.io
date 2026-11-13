@@ -1,86 +1,201 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects | ChloeHuangCodes</title><meta name="description" content="Chloe Huang software engineering projects: OpsIQ, Tiny Hoof Website and COVID-19 chatbot.">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Software engineering projects by Chloe Huang: OpsIQ AI Ticket Triage, Tiny Hoof Website, and the COVID-19 AI Chatbot.">
+<title>Projects | ChloeHuangCodes</title>
 <style>
-:root{--accent:#679dca;--ink:#111;--soft:#e0e9eb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:white;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300}a{color:inherit}a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.site-header{height:150px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px}.brand{font-size:19px;line-height:1.15;text-decoration:none}.updated{font-size:10.5px;margin-top:9px}.nav{display:flex;align-items:center;margin-top:2px}.nav a{padding:10px 35px;text-align:center;text-decoration:none;font-size:14px;min-width:176px}.nav a+a{border-left:2px solid #222}.nav .current{color:#789db7}
-.title-band{height:205px;background:#c3dce9 url('../assets/cloud-texture.png') center center/cover no-repeat;display:flex;align-items:center;justify-content:center}.title-band h1{font-size:52px;line-height:1;font-weight:700;margin:0}
-.project-list{width:min(100% - 48px,840px);margin:0 auto;padding:63px 0 109px}.project{display:grid;grid-template-columns:380px 380px;column-gap:60px;align-items:start;min-height:430px}.project+ .project{margin-top:83px}.project--third{margin-top:113px!important;min-height:490px}.media{display:flex;align-items:flex-start;justify-content:center;padding:0 4px}.media img{display:block;width:100%;height:auto;object-fit:contain}.media .opsiq{width:350px;max-height:332px;object-fit:cover;object-position:top left;border-radius:8px}.media .tiny{width:330px;max-height:270px;object-fit:contain}.media .covid{width:300px;max-height:400px;object-fit:contain}
-.project-copy{padding-top:0}.tag{font-size:14px;font-weight:300;color:var(--accent);margin:0 0 15px}.project h2{font-size:22px;line-height:1.2;text-decoration:underline;margin:0 0 23px;font-weight:700}.project h2 a{text-decoration:inherit}.description{font-size:14px;line-height:1.44;color:#353535;margin:0 0 20px}.description.extra{margin-top:20px}.stack{font-size:14px;line-height:1.5;color:var(--accent);margin:17px 0 27px}.stack-label{color:#858585;margin-right:8px}.read-more{display:inline-flex;align-items:center;justify-content:center;gap:14px;text-decoration:none;border-radius:32px;background:var(--soft);padding:8px 18px;font-size:14px;font-weight:300;line-height:1.4}.read-more span{display:inline-flex;align-items:center;justify-content:center;font-size:22px;line-height:1;font-weight:300;color:#657477;transform:translateY(-1px)}.read-more:hover{background:#ccdce0}
-.footer-cloud{height:238px;background:#c3dce9 url('../assets/cloud-texture.png') center/cover no-repeat}.copyright{height:210px;display:flex;justify-content:center;align-items:center;font-size:11px}
-@media(max-width:920px){.project-list{width:min(100% - 48px,760px)}.project{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:45px}.nav a{min-width:0;padding:10px 22px}}
-@media(max-width:650px){.site-header{height:auto;min-height:126px;padding:22px 18px;display:block}.nav{margin-top:22px;justify-content:space-between}.nav a{flex:1;padding:8px 6px;font-size:12px}.title-band{height:150px}.title-band h1{font-size:40px}.project-list{padding:45px 0 70px}.project,.project--third{display:flex;flex-direction:column;min-height:0;gap:24px;margin-top:0!important}.project+.project{margin-top:76px!important}.media{width:100%}.media .opsiq,.media .tiny,.media .covid{width:min(100%,350px);max-height:350px;object-fit:contain}.project-copy{width:100%}.tag{font-size:12px}.project h2{font-size:22px}.description,.stack{font-size:14px}.footer-cloud{height:160px}.copyright{height:130px}}
-</style><style>
-
-/* Click-to-open Projects navigation — consistent across all portfolio pages. */
-.portfolio-nav.portfolio-nav{display:flex;align-items:stretch;gap:0;width:auto;margin-top:2px;padding:0;max-width:none;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;position:relative;z-index:30}
-.portfolio-nav .nav-entry{display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 176px;min-width:0;min-height:39px;padding:9px 13px;border:0;background:transparent;text-align:center;color:#161616;font-family:inherit;font-size:14px;font-weight:300;line-height:1.35;text-decoration:none;white-space:nowrap;cursor:pointer}
-.portfolio-nav .nav-entry + .nav-entry{border-left:2px solid #2a2a2a}
-.portfolio-nav .portfolio-dropdown-wrap{padding:0;cursor:default}
-.portfolio-nav .portfolio-trigger{width:100%;height:100%;min-height:39px;padding:9px 13px;display:flex;align-items:center;justify-content:center;background:none;border:0;color:inherit;font:inherit;line-height:1.35;cursor:pointer}
-.portfolio-nav .nav-entry.current,.portfolio-nav .portfolio-trigger.current,.portfolio-nav .portfolio-trigger[aria-expanded="true"]{color:#789db7}
-.portfolio-nav .portfolio-trigger:focus-visible,.portfolio-nav .nav-entry:focus-visible,.portfolio-nav .portfolio-menu a:focus-visible{outline:2px solid #679dca;outline-offset:2px}
-.portfolio-nav .portfolio-menu[hidden]{display:none!important}
-.portfolio-nav .portfolio-menu{position:absolute;top:100%;left:0;z-index:100;display:block;width:315px;max-width:calc(100vw - 30px);margin:0;background:#fff;border:1px solid #888;box-shadow:0 5px 13px rgba(0,0,0,.12)}
-.portfolio-nav .portfolio-menu a{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;height:auto;min-height:51px;margin:0;padding:11px 14px;border:0;background:#fff;color:#111;text-align:center;text-decoration:none;font-family:inherit;font-size:14px;font-weight:300;line-height:1.3;white-space:normal;flex:none}
-.portfolio-nav .portfolio-menu a+a{border:0;border-top:1px solid #888}
-.portfolio-nav .portfolio-menu a:hover,.portfolio-nav .portfolio-menu a:focus-visible{background:#f0f6f9;color:#679dca}
-.portfolio-nav .portfolio-menu a.current,.portfolio-nav .portfolio-menu a[aria-current="page"]{color:#679dca;background:#f3f8fb}
-/* Only the Resume page uses an older stylesheet; align its header with the other pages. */
-body:not(.home-page) header.resume-header{height:150px;padding:39px 30px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;position:relative;top:auto;z-index:20;border-bottom:0;background:white}
-.resume-header .resume-brand{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;font-size:19px;line-height:1.15;text-decoration:none;letter-spacing:0}
-.resume-header .resume-updated{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:300;margin-top:9px;color:#111;padding:0;text-align:left}
-body:not(.home-page) header.resume-header .portfolio-nav{max-width:none;margin:2px 0 0;padding:0;display:flex;justify-content:flex-start;gap:0}
-@media(max-width:700px){
- .portfolio-nav.portfolio-nav{width:100%;margin-top:10px;justify-content:space-between}
- .portfolio-nav .nav-entry{flex:1 1 33.333%;min-width:0;min-height:34px;padding:7px 4px;font-size:12px}
- .portfolio-nav .portfolio-trigger{font-size:12px;min-height:34px;padding:7px 4px}
- .portfolio-nav .portfolio-menu{left:50%;transform:translateX(-50%);width:min(315px,calc(100vw - 28px))}
- .portfolio-nav .portfolio-menu a{font-size:13px;min-height:48px}
- body:not(.home-page) header.resume-header{height:auto;min-height:126px;padding:22px 18px;display:block}
- body:not(.home-page) header.resume-header .portfolio-nav{margin-top:22px;width:100%}
-}
+:root{--ink:#152b37;--body:#354b56;--blue:#527f98;--blue-deep:#2e5d78;--border:#dce6ec;--paper:#fff;--mist:#f5f8fa;--cloud:#eaf3f7}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:300 16px/1.65 "Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--blue-deep);outline-offset:4px;border-radius:3px}
+img{max-width:100%;height:auto}
+svg{width:20px;height:20px;flex:none}
+.skip-link{position:fixed;left:16px;top:-80px;z-index:1000;background:#fff;padding:10px 16px;box-shadow:0 2px 16px #0002}
+.skip-link:focus{top:14px}
+.shell{width:min(1160px,calc(100% - 64px));margin-inline:auto}
+/* Matching the About Me header */
+.site-header{background:white;position:relative;z-index:20;border-bottom:1px solid #edf1f3}
+.header-row{min-height:112px;display:flex;justify-content:space-between;align-items:center;gap:32px}
+.brand-name{display:block;font-size:21px;font-weight:500;letter-spacing:-.045em;text-decoration:none;line-height:1.3;color:#172b34}
+.updated{display:block;margin-top:7px;font-size:11px;letter-spacing:.01em;color:#667b85;line-height:1.3}
+.main-nav{display:flex;align-items:stretch;gap:0;margin-left:auto}
+.nav-link,.nav-trigger{font:400 14px/1.35 "Helvetica Neue",Helvetica,Arial,sans-serif;display:flex;align-items:center;justify-content:center;text-decoration:none;white-space:nowrap;padding:13px 25px;border:0;background:transparent;color:#334955;min-height:44px;cursor:pointer}
+.nav-link+.dropdown,.dropdown+.nav-link{border-left:1px solid #a9bbc3}
+.nav-link:hover,.nav-trigger:hover,.nav-link[aria-current=page],.nav-trigger.current{color:var(--blue-deep)}
+.nav-trigger.current{font-weight:600}
+.dropdown{position:relative}
+.nav-trigger{gap:7px}
+.nav-trigger svg{width:15px;height:15px;transition:transform .18s ease}
+.nav-trigger[aria-expanded=true] svg{transform:rotate(180deg)}
+.project-menu[hidden]{display:none}
+.project-menu{position:absolute;top:calc(100% + 11px);left:50%;transform:translateX(-50%);width:285px;z-index:30;background:white;box-shadow:0 18px 50px #14324429;border:1px solid #dae4e9;border-radius:12px;padding:8px}
+.project-menu a{display:block;padding:13px 14px;font-size:14px;line-height:1.4;text-decoration:none;color:#314e60;border-radius:8px}
+.project-menu a:hover,.project-menu a:focus-visible{background:#eef5f8;color:var(--blue-deep)}
+.project-menu a+a{border-top:1px solid #eef1f3}
+.project-menu .all-projects{font-weight:600;color:var(--blue-deep);background:#f0f6f9}
+/* Hero: same cloud palette, page-specific title rather than an About Me photo */
+.page-hero{background:#e3eff5 url('../assets/cloud-texture.png') center/cover no-repeat;border-bottom:1px solid #e4edf1}
+.page-hero-inner{min-height:232px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding-block:42px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#406c86;margin:0 0 15px;line-height:1.4}
+.page-hero h1{font-size:clamp(44px,5vw,68px);line-height:1.05;letter-spacing:-.055em;font-weight:400;margin:0;color:#173344}
+.page-hero .subtitle{font-size:16px;line-height:1.65;color:#38596b;max-width:660px;margin:17px 0 0}
+/* Main content */
+.main-content{padding-block:76px 98px}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px}
+.section-kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--blue);margin:0 0 10px}
+.section-heading h2{font-size:clamp(29px,3.1vw,41px);line-height:1.2;font-weight:400;letter-spacing:-.035em;margin:0}
+.section-heading h2 span{color:var(--blue)}
+.section-heading .section-note{font-size:14px;line-height:1.6;color:#667f8c;max-width:270px;margin:0 0 4px;text-align:right}
+.project-list{display:grid;gap:28px}
+.project-card{display:grid;grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);background:white;border:1px solid #dfe8ed;border-radius:23px;overflow:hidden;box-shadow:0 5px 24px #173c4b07}
+.project-card:focus-within{border-color:#afc9d7}
+.project-media{background:#eef4f6;min-height:340px;display:flex;align-items:center;justify-content:center;padding:30px;position:relative;border-right:1px solid #e0e9ee}
+.project-media::after{content:"";position:absolute;inset:16px;border:1px solid #ffffff75;border-radius:15px;pointer-events:none}
+.project-media a{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:260px;position:relative;z-index:1}
+.project-media img{display:block;width:100%;height:100%;max-height:330px;object-fit:contain;filter:drop-shadow(0 12px 12px #31566d10);transition:transform .2s ease}
+.project-media a:hover img{transform:scale(1.018)}
+.project-card:nth-child(2) .project-media{background:#f1f5f7}
+.project-card:nth-child(3) .project-media{background:#f3f7f9}
+.project-card:nth-child(3) .project-media img{max-height:325px;width:auto;max-width:100%}
+.project-content{padding:39px 44px 37px;display:flex;flex-direction:column;align-items:flex-start}
+.project-meta{display:flex;gap:12px;align-items:center;margin-bottom:15px}
+.project-index{font-size:12px;font-weight:600;color:#94a9b4;letter-spacing:.08em}
+.project-category{font-size:11px;font-weight:700;letter-spacing:.13em;color:#4e7890;text-transform:uppercase}
+.project-content h3{font-size:clamp(24px,2.3vw,32px);line-height:1.17;letter-spacing:-.038em;font-weight:500;margin:0 0 17px;color:#172d39}
+.project-content h3 a{text-decoration:none}
+.project-content h3 a:hover{text-decoration:underline;text-decoration-color:#85a8ba;text-underline-offset:5px}
+.project-description{color:#4e6570;font-size:14px;line-height:1.73;margin:0 0 20px;font-weight:300}
+.project-description.extra{margin-top:-7px}
+.project-description strong{font-weight:600;color:#29485c}
+.tech-heading{color:#79909b;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin:0 0 11px}
+.tech-list{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 25px;padding:0}
+.tech-list li{border:1px solid #dbe7ed;border-radius:100px;background:#f5f9fb;color:#426b82;font-size:12px;line-height:1.35;font-weight:500;padding:7px 11px}
+.project-link{margin-top:auto;display:inline-flex;gap:11px;align-items:center;justify-content:center;min-height:46px;border-radius:100px;background:#2e5d78;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:10px 19px;transition:background .2s ease,transform .2s ease}
+.project-link svg{width:17px;height:17px}
+.project-link:hover{background:#20465e;transform:translateY(-2px)}
+/* Contact strip: same design language and real SVG icons as the homepage */
+.connect{background:#dceaf1 url('../assets/cloud-texture.png') center/cover no-repeat;padding:72px 0}
+.connect-panel{background:#fff;border-radius:20px;box-shadow:0 18px 60px #1b44521e;padding:39px 48px;display:grid;grid-template-columns:76px minmax(0,1fr);gap:22px;align-items:center}
+.plane{width:66px;height:66px;object-fit:contain}
+.connect h2{font-size:clamp(27px,3vw,36px);font-weight:400;line-height:1.2;letter-spacing:-.035em;margin:0}
+.connect p{font-size:14px;color:#647c88;margin:11px 0 22px}
+.contact-links{display:flex;gap:9px;flex-wrap:wrap}
+.contact-links a{font-size:13px;font-weight:500;display:inline-flex;gap:8px;align-items:center;text-decoration:none;color:#284f66;background:#f1f6f8;border:1px solid #e2ebef;border-radius:100px;padding:10px 15px;min-height:42px}
+.contact-links a:hover{background:#e5f0f5;border-color:#b7cfdc}
+.contact-links svg{width:18px;height:18px}
+.site-footer{min-height:108px;display:flex;align-items:center;justify-content:space-between;gap:25px;color:#718592;font-size:12px}
+.back-top{text-decoration:none;color:#3d6d85}
+.back-top:hover{text-decoration:underline}
+@media(max-width:1020px){.shell{width:min(100% - 48px,900px)}.header-row{gap:18px}.nav-link,.nav-trigger{padding-inline:18px}.project-card{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.project-media{padding:22px;min-height:300px}.project-content{padding:30px 30px 30px}.connect-panel{padding:35px}}
+@media(max-width:750px){.header-row{min-height:0;display:block;padding-block:20px}.main-nav{margin:21px -7px 0;justify-content:space-between}.nav-link,.nav-trigger{padding:10px 10px;font-size:13px}.nav-link+.dropdown,.dropdown+.nav-link{border-color:#ccd8de}.page-hero-inner{min-height:200px;padding-block:35px}.main-content{padding-block:55px 70px}.project-card{grid-template-columns:1fr}.project-media{min-height:260px;border-right:0;border-bottom:1px solid #e0e9ee}.project-media a{min-height:215px}.project-content{padding:29px 30px 32px}.section-heading{align-items:start}.section-heading .section-note{max-width:190px}.connect{padding:50px 0}}
+@media(max-width:520px){body{font-size:15px}.shell{width:calc(100% - 36px)}.brand-name{font-size:20px}.updated{font-size:10px}.main-nav{margin-inline:-4px}.nav-link,.nav-trigger{font-size:12px;padding:8px 9px}.nav-trigger{gap:3px}.nav-trigger svg{width:13px;height:13px}.project-menu{width:min(280px,calc(100vw - 36px))}.page-hero-inner{min-height:188px}.page-hero .subtitle{font-size:14px}.main-content{padding-block:46px 59px}.section-heading{display:block;margin-bottom:25px}.section-heading .section-note{text-align:left;margin-top:10px}.project-list{gap:20px}.project-card{border-radius:18px}.project-media{padding:18px;min-height:205px}.project-media a{min-height:175px}.project-media img{max-height:210px}.project-card:nth-child(3) .project-media img{max-height:220px}.project-content{padding:24px 23px 27px}.project-content h3{font-size:26px}.project-description{font-size:14px}.connect-panel{grid-template-columns:1fr;padding:29px 23px}.plane{height:48px;width:48px}.connect h2{font-size:29px}.contact-links a{font-size:12px}.site-footer{min-height:100px;flex-direction:column;align-items:start;justify-content:center;gap:5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
-</head><body>
-<header class="site-header"><div><a class="brand" href="../">ChloeHuangCodes</a><div class="updated">This website was last updated on 11/13/2026</div></div><nav class="nav portfolio-nav" aria-label="Main navigation">
-  <a class="nav-entry" href="../">About Me</a>
-  <div class="nav-entry portfolio-dropdown-wrap">
-    <button class="portfolio-trigger current" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="portfolio-project-menu">Projects</button>
-    <div class="portfolio-menu" id="portfolio-project-menu" hidden>
-      <a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a><a href="../tiny-hoof-website/">Tiny Hoof Website</a><a href="../covid19-ai-chatbot/">COVID-19 AI Chatbot</a>
-    </div>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to projects</a>
+<header class="site-header" id="top">
+  <div class="header-row shell">
+    <div class="brand"><a class="brand-name" href="../">ChloeHuangCodes</a><span class="updated">This website was last updated on 11/13/2026</span></div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link" href="../">About Me</a>
+      <div class="dropdown">
+        <button class="nav-trigger current" type="button" id="projects-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="projects-menu">Projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="project-menu" id="projects-menu" hidden>
+          <a class="all-projects" href="./" aria-current="page">All Projects</a>
+          <a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a>
+          <a href="../tiny-hoof-website/">Tiny Hoof Website</a>
+          <a href="../covid19-ai-chatbot/">COVID-19 AI Chatbot</a>
+        </div>
+      </div>
+      <a class="nav-link" href="../lead-collection/">Resume &amp; Contact</a>
+    </nav>
   </div>
-  <a class="nav-entry" href="../lead-collection/">Resume &amp; Contact</a>
-</nav></header>
-<section class="title-band"><h1>Projects</h1></section>
-<main class="project-list">
-<article class="project"><div class="media"><img class="opsiq" src="../assets/opsiq-preview.jpg" alt="OpsIQ AI ticket dashboard screenshot"></div><div class="project-copy"><p class="tag">AI + FULL STACK</p><h2><a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a></h2><p class="description">An AI-powered ticket management application that helps streamline IT support workflows through automated ticket analysis and prioritization. Users can create, manage, and update support tickets while receiving AI-generated categorization, priority recommendations, and suggested next steps. Built with Angular, Java, Spring Boot, HTML/CSS, and PostgreSQL.</p><div class="stack"><span class="stack-label">Built with</span> Angular · Spring Boot · PostgreSQL<br>OpenRouter LLM · REST API</div><a class="read-more" href="../opsiq-ai-ticket-triage/">Read More <span aria-hidden="true">⟶</span></a></div></article>
-<article class="project"><div class="media"><img class="tiny" src="../assets/tiny-hoof-project.png" alt="Tiny Hoof website screenshots"></div><div class="project-copy"><p class="tag">WEB DEVELOPMENT</p><h2><a href="../tiny-hoof-website/">Tiny Hoof Website</a></h2><p class="description">A custom business website built to support Tiny Hoof’s online presence and improve customer accessibility. Developed as part of a four-person team for a real-world business client, the site has remained in active production use for more than four years. Used a customizable web framework with extended functionality.</p><div class="stack"><span class="stack-label">Built with</span> HTML · CSS · JavaScript · Custom CMS</div><a class="read-more" href="../tiny-hoof-website/">Read More <span aria-hidden="true">⟶</span></a></div></article>
-<article class="project project--third"><div class="media"><img class="covid" src="../assets/covid-conversation.png" alt="COVID-19 chatbot conversation screenshot"></div><div class="project-copy"><p class="tag">AI/NLP</p><h2><a href="../covid19-ai-chatbot/">Covid-19 Chatbot</a></h2><p class="description">A real-time AI chatbot built to provide COVID-19 information through both text and voice interactions. Users can ask open-ended COVID-related questions and receive instant responses across desktop and mobile devices. The project was named a finalist in the 2020 Hawai‘i Annual Coding Challenge (HACC).</p><p class="description extra"><strong>Want a quick overview?</strong> Check out the 3-minute pitch video for the chatbot project.</p><div class="stack"><span class="stack-label">Built with</span> Conversational AI · NLP · Voice-to-Text<br>Vue.js · JavaScript · Dialogflow</div><a class="read-more" href="../covid19-ai-chatbot/">Read More <span aria-hidden="true">⟶</span></a></div></article>
-</main><footer><div class="footer-cloud"></div><div class="copyright">© 2026 Chloe Huang. All rights reserved.</div></footer>
+</header>
+<main id="main-content">
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="page-hero-inner shell">
+      <p class="eyebrow">Portfolio / Selected work</p>
+      <h1 id="page-title">Projects<span style="color:#6491a9">.</span></h1>
+      <p class="subtitle">A closer look at the applications and websites I’ve built—from AI-assisted support workflows to accessible, community-focused experiences.</p>
+    </div>
+  </section>
+  <section class="main-content shell" aria-labelledby="work-heading">
+    <div class="section-heading">
+      <div><p class="section-kicker">01 / FEATURED WORK</p><h2 id="work-heading">Built with <span>purpose.</span></h2></div>
+      <p class="section-note">Three projects. Different problems. One focus: thoughtful, useful software.</p>
+    </div>
+    <div class="project-list">
+      <article class="project-card" aria-labelledby="opsiq-title">
+        <div class="project-media"><a href="../opsiq-ai-ticket-triage/" aria-label="Explore OpsIQ AI Ticket Triage"><img src="../assets/opsiq-preview.jpg" alt="OpsIQ AI Ticket Triage interface displaying ticket details, AI analysis, and dashboard metrics" loading="eager"></a></div>
+        <div class="project-content">
+          <div class="project-meta"><span class="project-index">01</span><span class="project-category">AI + Full Stack</span></div>
+          <h3 id="opsiq-title"><a href="../opsiq-ai-ticket-triage/">OpsIQ AI Ticket Triage</a></h3>
+          <p class="project-description">An AI-powered ticket management application that helps streamline IT support workflows through automated ticket analysis and prioritization. Users can create, manage, and update support tickets while receiving AI-generated categorization, priority recommendations, and suggested next steps. Built with Angular, Java, Spring Boot, HTML/CSS, and PostgreSQL.</p>
+          <p class="tech-heading">Built with</p>
+          <ul class="tech-list" aria-label="OpsIQ technologies"><li>Angular</li><li>Spring Boot</li><li>PostgreSQL</li><li>OpenRouter LLM</li><li>REST API</li></ul>
+          <a class="project-link" href="../opsiq-ai-ticket-triage/">Explore project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="project-card" aria-labelledby="tiny-title">
+        <div class="project-media"><a href="../tiny-hoof-website/" aria-label="Explore Tiny Hoof Website"><img src="../assets/tiny-hoof-preview.png" alt="Tiny Hoof Animal Therapy website featuring a Maui farm, rainbow, and organization story" loading="eager"></a></div>
+        <div class="project-content">
+          <div class="project-meta"><span class="project-index">02</span><span class="project-category">Web Development</span></div>
+          <h3 id="tiny-title"><a href="../tiny-hoof-website/">Tiny Hoof Website</a></h3>
+          <p class="project-description">A custom business website built to support Tiny Hoof’s online presence and improve customer accessibility. Developed as part of a four-person team for a real-world business client, the site has remained in active production use for more than four years. Used a customizable web framework with extended functionality.</p>
+          <p class="tech-heading">Built with</p>
+          <ul class="tech-list" aria-label="Tiny Hoof technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Custom CMS</li></ul>
+          <a class="project-link" href="../tiny-hoof-website/">Explore project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="project-card" aria-labelledby="covid-title">
+        <div class="project-media"><a href="../covid19-ai-chatbot/" aria-label="Explore COVID-19 AI Chatbot"><img src="../assets/covid-conversation.png" alt="COVID-19 chatbot conversation showing question and answer messages" loading="eager"></a></div>
+        <div class="project-content">
+          <div class="project-meta"><span class="project-index">03</span><span class="project-category">AI / NLP</span></div>
+          <h3 id="covid-title"><a href="../covid19-ai-chatbot/">COVID-19 AI Chatbot</a></h3>
+          <p class="project-description">A real-time AI chatbot built to provide COVID-19 information through both text and voice interactions. Users can ask open-ended COVID-related questions and receive instant responses across desktop and mobile devices. The project was named a finalist in the 2020 Hawai‘i Annual Coding Challenge (HACC).</p>
+          <p class="project-description extra"><strong>Want a quick overview?</strong> Check out the 3-minute pitch video for the chatbot project.</p>
+          <p class="tech-heading">Built with</p>
+          <ul class="tech-list" aria-label="COVID-19 chatbot technologies"><li>Conversational AI</li><li>NLP</li><li>Voice-to-Text</li><li>Vue.js</li><li>JavaScript</li><li>Dialogflow</li></ul>
+          <a class="project-link" href="../covid19-ai-chatbot/">Explore project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="connect" aria-labelledby="connect-heading">
+    <div class="connect-panel shell">
+      <img class="plane" src="../assets/paper-plane.png" alt="" width="70" height="70" loading="eager">
+      <div>
+        <h2 id="connect-heading">Let’s build something amazing together.</h2>
+        <p>Have an opportunity or a project in mind? Here are the best ways to reach me and explore my work.</p>
+        <div class="contact-links">
+          <a href="mailto:chloehuangjobs@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+          <a href="https://www.linkedin.com/in/chloe-huang-tech/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="3"/><path d="M7 10v7M7 7h.01M11 17v-7h3v1.3a3 3 0 0 1 5 2.3V17M11 12.5a3 3 0 0 1 3-2.5"/></svg>LinkedIn</a>
+          <a href="https://github.com/chloehuang2021" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.5 1.4-4.5-2.5-6.5-3M15 21v-3.8a3.3 3.3 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.7a5.1 5.1 0 0 0-1.4-3.5 4.7 4.7 0 0 0-.1-3.5S17.5.5 15 2.4a13 13 0 0 0-6 0C6.5.5 5.3.9 5.3.9a4.7 4.7 0 0 0-.1 3.5 5.1 5.1 0 0 0-1.4 3.5c0 5.2 3.1 6.4 6.1 6.7A3.3 3.3 0 0 0 9 17.2V21"/></svg>GitHub</a>
+          <a href="../lead-collection/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer shell"><span>© 2026 Chloe Huang. All rights reserved.</span><a class="back-top" href="#top">Back to top ↑</a></footer>
 <script>
 (function(){
-  const dropdown = document.querySelector('.portfolio-dropdown-wrap');
-  if (!dropdown) return;
-  const button = dropdown.querySelector('.portfolio-trigger');
-  const menu = dropdown.querySelector('.portfolio-menu');
-  function setOpen(open){
-    button.setAttribute('aria-expanded', String(open));
-    menu.hidden = !open;
-  }
-  button.addEventListener('click', function(event){
-    event.stopPropagation();
-    setOpen(button.getAttribute('aria-expanded') !== 'true');
-  });
-  document.addEventListener('click', function(event){
-    if (!dropdown.contains(event.target)) setOpen(false);
-  });
-  document.addEventListener('keydown', function(event){
-    if (event.key === 'Escape' && !menu.hidden){
-      setOpen(false);
-      button.focus();
-    }
-  });
+  var toggle=document.getElementById('projects-toggle');
+  var menu=document.getElementById('projects-menu');
+  if(!toggle||!menu) return;
+  function setOpen(open){toggle.setAttribute('aria-expanded',String(open));menu.hidden=!open;}
+  toggle.addEventListener('click',function(e){e.stopPropagation();setOpen(menu.hidden);});
+  document.addEventListener('click',function(e){if(!menu.contains(e.target)&&e.target!==toggle&&!toggle.contains(e.target))setOpen(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden){setOpen(false);toggle.focus();}});
 })();
 </script>
-</body></html>
+</body>
+</html>
