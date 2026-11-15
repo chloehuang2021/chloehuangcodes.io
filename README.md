@@ -1,5 +1,9 @@
 # ChloeHuangCodes — corrected homepage
 
+# My portfolio website 
+https://chloehuangcodes.com
+
+
 ## Important
 The homepage has CSS embedded inside `index.html`, so it will not show as unstyled text if `style.css` is missing.
 
