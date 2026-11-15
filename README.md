@@ -1,7 +1,7 @@
 # ChloeHuangCodes — corrected homepage
 
 # My portfolio website 
-https://chloehuangcodes.com
+🚀 https://chloehuangcodes.com
 
 
 ## Important
