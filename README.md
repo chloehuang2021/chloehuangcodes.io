@@ -15,4 +15,3 @@ All `assets/` must be uploaded, especially `cloud-banner.png`, `chloe-avatar.png
 
 Other pages still use `style.css` and have not been visually matched yet. Domain/DNS settings must remain unchanged until full migration is finished.
 
-Note: Footer background is a temporary reconstruction; the contact links and resume still need verification.
