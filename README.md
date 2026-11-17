@@ -14,4 +14,3 @@ If GitHub refuses to replace an existing `index.html`, open the existing one, cl
 All `assets/` must be uploaded, especially `cloud-banner.png`, `chloe-avatar.png`, `sun-icon.png`, `opsiq-preview.jpg`, `tiny-hoof-preview.png`, `covid-chatbot-preview.png`, `paper-plane.png`, and `footer-cloud-temp.jpg`.
 
 Other pages still use `style.css` and have not been visually matched yet. Domain/DNS settings must remain unchanged until full migration is finished.
-
